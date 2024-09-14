@@ -32,7 +32,7 @@
 #define FR_UNDS (N8)              // _
 #define FR_CCED (N9)              // ç
 #define FR_AGRV (N0)              // à
-#define FR_RPRN (MINUS)           // )
+#define FR_RPRN (MINUS)           //
 #define FR_EQL (EQUAL)           // =
 
 // Row 2
@@ -109,8 +109,8 @@
 #define FR_PND  LS(FR_DLR)       // £
 
 // Row 3
-#define FR_PERC S(FR_UGRV)       // %
-#define FR_MICR S(FR_ASTR)       // µ
+#define FR_PERC LS(FR_UGRV)       // %
+#define FR_MICR LS(FR_ASTR)       // µ
 
 // Row 4
 #define FR_RABK LS(FR_LABK) // >
@@ -134,20 +134,20 @@
  * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
  */
 // Row 1
-#define FR_TILD ALGR(FR_EACU) // ~ (dead)
-#define FR_HASH ALGR(FR_DQUO) // #
-#define FR_LCBR ALGR(FR_QUOT) // {
-#define FR_LBRC ALGR(FR_LPRN) // [
-#define FR_PIPE ALGR(FR_MINS) // |
-#define FR_GRV  ALGR(FR_EGRV) // ` (dead)
-#define FR_BSLS ALGR(FR_UNDS) // (backslash)
-#define FR_AT   ALGR(FR_AGRV) // @
-#define FR_RBRC ALGR(FR_RPRN) // ]
-#define FR_RCBR ALGR(FR_EQL)  // }
+#define FR_TILD RA(FR_EACU) // ~ (dead)
+#define FR_HASH RA(FR_DQUO) // #
+#define FR_LCBR RA(FR_QUOT) // {
+#define FR_LBRC RA(FR_LPRN) // [
+#define FR_PIPE RA(FR_MINS) // |
+#define FR_GRV  RA(FR_EGRV) // ` (dead)
+#define FR_BSLS RA(FR_UNDS) // (backslash)
+#define FR_AT   RA(FR_AGRV) // @
+#define FR_RBRC RA(FR_RPRN) // ]
+#define FR_RCBR RA(FR_EQL)  // }
 
 // Row 2
-#define FR_EURO ALGR(E)       // €
-#define FR_CURR ALGR(FR_DLR)  // ¤
+#define FR_EURO RA(E)       // €
+#define FR_CURR RA(FR_DLR)  // ¤
 /** 
  * Personalized symbols.
  * 
@@ -157,4 +157,8 @@
 #define FR_BKTK RA(MINUS)        // `
 #define FR_TILDE RA(EQUAL)       // ~
 #define FR_CEGR RA(LS(E))        // È
+
+// Row 2
+#define IT_LBRC LS(RA(LBKT))     // {
+#define IT_RBRC LS(RA(RBKT))     // }
 */
