@@ -70,7 +70,7 @@
 			tap-ms = <40>;
 			bindings
     		= <&macro_press   &kp LALT>
-    		, <&macro_tap     KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N2>
+    		, <&macro_tap     &kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N2>
     		, <&macro_release &kp LALT>
     		;
 		};
