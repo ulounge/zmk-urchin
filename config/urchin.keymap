@@ -8,7 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-#include "keymap_italian.h"
+#include "keymap_french.h"
 
 // Layer definitions
 #define BASE 0
@@ -89,10 +89,10 @@
 		default_layer {
 			label = "Base";
 			bindings = <
-			&kp Q &kp W &kp E &kp R &kp T           &kp Y &kp U  &kp I     &kp O   &kp P 
-			&kp A &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L &kp IT_OGRV
-			&kp Z &kp X &kp C &kp V &kp B           &kp N &kp M  &kp COMMA &kp DOT &kp IT_UGRV
-							&mo EXT &qt LSHIFT SPACE           &kp SPACE &sl SYM
+			&kp FR_A &kp FR_Z &kp FR_E &kp FR_R &kp FR_T           &kp FR_Y &kp FR_U  &kp FR_I     &kp FR_O   &kp PFR_P 
+			&kp FR_Q &kp FR_S &kp FR_D &kp FR_F &kp FR_G           &kp FR_H &kp FR_J  &kp FR_K     &kp FR_L   &kp FR_M
+			&kp FR_W &kp FR_X &kp FR_C &kp FR_V &kp FR_B           &kp FR_N &kp FR_COMM  &kp FR_DOT  &kp FR_QUOT    &kp FR_COLN
+							           &mo EXT  &qt LSHIFT SPACE   &kp SPACE &sl SYM
 			>;
 		};
 
@@ -100,10 +100,10 @@
 		sym_layer {
 			label = "Sym.";
 			bindings = <
-			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                                    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-			&kp IT_LESS &kp IT_USD &kp IT_LPAR &kp IT_LBRC &kp IT_LBKT  &kp IT_EQL &kp IT_QUES &kp IT_SQUOT &kp IT_MINUS &kp IT_AST
-			&kp IT_GREAT &kp IT_PERC &kp IT_RPAR &kp IT_RBRC &kp IT_RBKT 	&kp IT_AT &kp IT_EXCL &kp IT_DQUOT &kp IT_PLUS &kp IT_FSLH
-														&mo FNC  &mo SYM2       &trans &trans
+			&kp FR_1 &kp FR_2 &kp FR_3 &kp FR_4 &kp FR_5		   			&kp FR_6 &kp FR_7 &kp FR_8 &kp FR_9 &kp FR_0
+			&kp FR_PERC &kp FR_HASH &kp FR_EURO &kp FR_UNDS &kp FR_LPRN  	&kp FR_QUES &kp FR_AT &kp FR_PLUS &kp FR_ASTR &kp FR_DQUO
+			&kp FR_BSLS &kp FR_AMPR &kp FR_DLR &kp FR_PIPE &kp FR_RPRN 		&kp FR_EXLM &kp FR_EQL &kp FR_MINS &kp FR_SLSH &kp FR_SCLN
+													&mo FNC  &mo SYM2   	&trans &trans
 			>;
 		};
 
@@ -111,10 +111,10 @@
 		ext_layer {
 			label = "Mods";
 			bindings = <
-			&kp ESC  &kp C_PREV &kp C_PP  &kp C_NEXT  &kp C_PAUSE    	&kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
-			&sk LALT &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT 			&kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
-			&kp LC(Z)  &kp LC(X) &kp LC(C) &kp TAB   &kp LC(V)          &kp LC(BSPC) &kp BSPC &trans &trans  &trans
-																		&trans &kp LCTRL    &kp ENTER  &mo FNC 
+			&kp ESC  &none 	&none &none &none    						&kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
+			&sk LALT &sk LGUI  &sk LSHIFT  &sk LCTRL  &sk RALT 			&kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
+			&kp LC(FR_Z)  &kp LC(X) &kp LC(C) &kp TAB   &kp LC(V)       &kp LC(BSPC) &kp BSPC &none &none &none
+													&trans &kp LCTRL    &kp ENTER  &mo FNC 
 			>;
 		};
 
@@ -122,10 +122,10 @@
 		fnc_layer {
 			label = "FRow";
 			bindings = <
-			&kp F1 &kp F2 &kp F3 &kp F4 &kp F5                  &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 
-			&sk LALT &sk LGUI &sk LSHIFT &sk LCTRL &kp RALT     &kp F11 &kp F12  &kp PRINTSCREEN &trans &trans
-			&none &none &none &none &none				          &none &none &none &none &none 
-							  &none &none              &none &none  
+			&kp F1 &kp F2 &kp F3 &kp F4 &kp F5                  		&kp F6 &kp F7 &kp F8 &kp F9 &kp F10 
+			&sk LALT &sk LGUI &sk LSHIFT &sk LCTRL &sk RALT     		&kp F11 &kp F12  &none &LC(HOME) &LC(PG_DN)
+			&kp PRINTSCREEN &none &kp C_PREV &kp C_PP  &kp C_NEXT		&kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &none &LC(PG_UP)
+							  							&none &none     &none &none  
 			>;
 		};
 
@@ -133,10 +133,10 @@
 		symbols_2_layer {
 			label = "Sym.2";
 			bindings = <
-			&kp IT_CARET &kp IT_UNDER &kp IT_PND &kp IT_EUR &kp IT_HASH         &none &none &none &none &none 
-			&kp IT_BKTK &kp IT_TILDE &kp IT_BSLH &kp IT_PIPE &kp IT_AND         &none &none &none &none &none
-			&none 			&none 			 &kp IT_SECT &kp IT_CCED &kp IT_DEG				  &none &none &none &none &none
-																	&none &none        	&none &none 
+			&kp FR_CIRC &kp FR_PND &kp FR_LCBR &kp FR_LABK &kp FR_LBRC         &none &none &none &none &none 
+			&kp FR_GRV &kp FR_TILD &kp FR_RCBR &kp FR_RABK &kp FR_RBRC         &none &none &none &none &none
+			&none &none &none &none &none				  					   &none &none &none &none &none
+															&none &none        &none &none 
 			>;
 		};
 
@@ -144,9 +144,9 @@
 		accent_layer {
 			label = "Accent";
 			bindings = <
-			&none &none &none &kp IT_CEGR &none                         &none &none &none &none &none 
-			&kp IT_AGRV &kp IT_IGRV &kp IT_OGRV &kp IT_EGRV &kp IT_EACU &none &none &none &none &none
-			&none &none &none &kp IT_UGRV &none                         &none &none &none &none &none
+			&kp FR_AGRV &none &FR_EACU &none &none                      &none &FR_UGRV &none &none &none 
+			&none &none &kp FR_EGRV &none &none 						&none &none &none &none &none
+			&none &none &kp FR_CCED &none &none                   &none &none &none &none &none
 									&none &none                         &none &none 
 			>;
 		};
