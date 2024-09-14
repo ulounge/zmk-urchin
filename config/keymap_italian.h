@@ -24,6 +24,7 @@
 #define IT_BSLH GRAVE            // backslash
 #define IT_SQUOT MINUS           // '
 #define IT_IGRV EQUAL            // ì
+
 // Row 2
 #define IT_EGRV LBKT             // è
 #define IT_PLUS SLASH            // +
