@@ -100,7 +100,7 @@
 		sym_layer {
 			label = "Sym.";
 			bindings = <
-			&none &none &none &none &none  &none &none &none &none &none
+			&kp FR_1 &none &none &none &none  &none &none &none &none &none
 			&none &none &none &none &none  &none &none &none &none &none
 			&none &none &none &none &none  &none &none &none &none &none
 													&mo FNC  &mo SYM2   	&trans &trans
