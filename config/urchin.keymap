@@ -62,7 +62,7 @@
     		, <&macro_release &kp LALT>
     		;
 		};
-		/*
+		
 		a_circbis: a_circbis {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
@@ -74,7 +74,7 @@
     		, <&macro_release &kp LALT>
     		;
 		};
-		*/
+		
 	};
 
 	combos {
