@@ -144,7 +144,7 @@
 		accent_layer {
 			label = "Accent";
 			bindings = <
-			&kp FR_AGRV &none &none &none &none                      &none &none &none &none &none 
+			&kp FR_AGRV &none &FR_EACU &none &none                      &none &none &none &none &none 
 			&none &none &none &none &none				  					   &none &none &none &none &none
 			&none &none &none &none &none				  					   &none &none &none &none &none
 									&none &none                         &none &none 
