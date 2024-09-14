@@ -21,60 +21,60 @@
  * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
  */
 // Row 1
-#define FR_SUP2 GRAVE           // ²
-#define FR_AMPR N1              // &
-#define FR_EACU N2              // é
-#define FR_DQUO N3              // "
-#define FR_QUOT N4              // '
-#define FR_LPRN N5              // (
-#define FR_MINS N6              // -
-#define FR_EGRV N7              // è
-#define FR_UNDS N8              // _
-#define FR_CCED N9              // ç
-#define FR_AGRV N0              // à
-#define FR_RPRN MINUS           // )
-#define FR_EQL  EQUAL           // =
+#define FR_SUP2 (GRAVE)           // ²
+#define FR_AMPR (N1)              // &
+#define FR_EACU (N2)              // é
+#define FR_DQUO (N3)              // "
+#define FR_QUOT (N4)              // '
+#define FR_LPRN (N5)              // (
+#define FR_MINS (N6)              // -
+#define FR_EGRV (N7)              // è
+#define FR_UNDS (N8)              // _
+#define FR_CCED (N9)              // ç
+#define FR_AGRV (N0)              // à
+#define FR_RPRN (MINUS)           // )
+#define FR_EQL (EQUAL)           // =
 
 // Row 2
-#define FR_A    Q               // A
-#define FR_Z    W               // Z
-#define FR_E    E               // E
-#define FR_R    R               // R
-#define FR_T    T               // T
-#define FR_Y    Y               // Y
-#define FR_U    U               // U
-#define FR_I    I               // I
-#define FR_O    O               // O
-#define FR_P    P               // P
-#define FR_CIRC LBKT            // ^ (dead)
-#define FR_DLR RBKT             // $
+#define FR_A (Q)               // A
+#define FR_Z (W)               // Z
+#define FR_E (E)               // E
+#define FR_R (R)               // R
+#define FR_T (T)               // T
+#define FR_Y (Y)               // Y
+#define FR_U (U)               // U
+#define FR_I (I)               // I
+#define FR_O (O)               // O
+#define FR_P (P)               // P
+#define FR_CIRC (LBKT)            // ^ (dead)
+#define FR_DLR (RBKT)             // $
 
 // Row 3
-#define FR_Q    A               // Q
-#define FR_S    S               // S
-#define FR_D    D               // D
-#define FR_F    F               // F
-#define FR_G    G               // G
-#define FR_H    H               // H
-#define FR_J    J               // J
-#define FR_K    K               // K
-#define FR_L    L               // L
-#define FR_M    SEMI            // M
-#define FR_UGRV APOS            // ù
-#define FR_ASTR NON_US_HASH     // *
+#define FR_Q (A)               // Q
+#define FR_S (S)               // S
+#define FR_D (D)               // D
+#define FR_F (F)               // F
+#define FR_G (G)               // G
+#define FR_H (H)               // H
+#define FR_J (J)               // J
+#define FR_K (K)               // K
+#define FR_L (L)               // L
+#define FR_M (SEMI)            // M
+#define FR_UGRV (APOS)            // ù
+#define FR_ASTR (NON_US_HASH)     // *
 
 // Row 4
-#define FR_LABK NON_US_BSLH     // <
-#define FR_W    Z               // W
-#define FR_X    X               // X
-#define FR_C    C               // C
-#define FR_V    V               // V
-#define FR_B    B               // B
-#define FR_N    N               // N
-#define FR_COMM M               // ,
-#define FR_SCLN COMMA           // ;
-#define FR_COLN DOT             // :
-#define FR_EXLM SLASH           // !
+#define FR_LABK (NON_US_BSLH)     // <
+#define FR_W (Z)               // W
+#define FR_X (X)               // X
+#define FR_C (C)               // C
+#define FR_V (V)               // V
+#define FR_B (B)               // B
+#define FR_N (N)               // N
+#define FR_COMM (M)               // ,
+#define FR_SCLN (COMMA)           // ;
+#define FR_COLN (DOT)             // :
+#define FR_EXLM (SLASH)           // !
 
 
 /* Shifted symbols
