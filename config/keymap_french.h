@@ -96,9 +96,9 @@
 #define FR_3    LS(FR_DQUO)      // 3
 #define FR_4    LS(FR_QUOT)      // 4
 #define FR_5    LS(FR_LPRN)      // 5
-#define FR_6    LS(FR_MINLS)     // 6
+#define FR_6    LS(FR_MINS)     // 6
 #define FR_7    LS(FR_EGRV)      // 7
-#define FR_8    LS(FR_UNDLS)     // 8
+#define FR_8    LS(FR_UNDS)     // 8
 #define FR_9    LS(FR_CCED)      // 9
 #define FR_0    LS(FR_AGRV)      // 0
 #define FR_DEG  LS(FR_RPRN)      // °
@@ -146,7 +146,7 @@
 #define FR_RCBR RA(FR_EQL)  // }
 
 // Row 2
-#define FR_EURO RA(E)       // €
+#define FR_EURO RA(FR_E)       // €
 #define FR_CURR RA(FR_DLR)  // ¤
 /** 
  * Personalized symbols.
