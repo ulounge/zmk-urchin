@@ -51,6 +51,26 @@
 			#binding-cells = <0>;
 			bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
 		};
+		a_circ: a_circ {
+			compatible = "zmk,behavior-macro";
+			wait-ms = <40>;
+			tap-ms = <40>;
+			bindings
+    		= <&macro_press   &kp LALT>
+    		, <&macro_tap     &kp KP_N1 &kp KP_N3 &kp KP_N1>
+    		, <&macro_release &kp LALT>
+    		;
+		};
+		a_circbis: a_circbis {
+			compatible = "zmk,behavior-macro";
+			wait-ms = <40>;
+			tap-ms = <40>;
+			bindings
+    		= <&macro_press   &kp LALT>
+    		, <&macro_tap     &kp FR_1 &kp FR_3 &kp FR_1>
+    		, <&macro_release &kp LALT>
+    		;
+		};
 	};
 
 	combos {
@@ -111,7 +131,7 @@
 		ext_layer {
 			label = "Mods";
 			bindings = <
-			&kp ESC  &none 	&none &none &none    						&kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
+			&kp ESC  &a_circ 	&a_circbis &none &none    						&kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
 			&sk LALT &sk LGUI  &sk LSHIFT  &sk LCTRL  &sk RALT 			&kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
 			&kp LC(FR_Z)  &kp LC(X) &kp LC(C) &kp TAB   &kp LC(V)       &kp LC(BSPC) &kp BSPC &none &none &none
 													&trans &kp LCTRL    &kp ENTER  &mo FNC 
@@ -163,9 +183,4 @@
 		};
 	};
 };
-/*bindings = <
-			&kp FR_AGRV &none &FR_EACU &none &none                      &none &FR_UGRV &none &none &none 
-			&none &none &kp FR_EGRV &none &none 						&none &none &none &none &none
-			&none &none &kp FR_CCED &none &none                   		&none &none &none &none &none
-									&none &none                         &none &none 
-			>;*/
+
