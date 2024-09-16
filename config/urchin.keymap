@@ -213,10 +213,10 @@
 		default_layer {
 			label = "Base";
 			bindings = <
-			&kp FR_A &kp FR_Z &kp FR_E &kp FR_R &kp FR_T           &kp FR_Y &kp FR_U  &kp FR_I     &kp FR_O   &kp FR_P 
-			&kp FR_Q &kp FR_S &kp FR_D &kp FR_F &kp FR_G           &kp FR_H &kp FR_J  &kp FR_K     &kp FR_L   &kp FR_M
-			&kp FR_W &kp FR_X &kp FR_C &kp FR_V &kp FR_B           &kp FR_N &kp FR_COMM  &kp FR_DOT  &kp FR_QUOT    &kp FR_I
-							           &mo EXT  &qt LSHIFT SPACE   &kp SPACE &sl SYM
+			&qt LS(FR_A) FR_A &kp FR_Z &kp FR_E &kp FR_R &kp FR_T           &kp FR_Y &kp FR_U  &kp FR_I     &kp FR_O   &kp FR_P 
+			&kp FR_Q &kp FR_S &kp FR_D &kp FR_F &kp FR_G           &kp FR_H &kp FR_J  &kp FR_K     &qt LS(FR_L) FR_L   &kp FR_M
+			&kp FR_W &kp FR_X &kp FR_C &kp FR_V &kp FR_B           &kp FR_N &kp FR_COMM  &kp FR_DOT  &kp FR_QUOT    &kp FR_COLN
+							           &mo EXT  &qt LSHIFT SPACE   &kp ENTER &sl SYM
 			>;
 		};
 
@@ -226,7 +226,7 @@
 			bindings = <
 			&kp FR_1 &kp FR_2 &kp FR_3 &kp FR_4 &kp FR_5  					&kp FR_6 &kp FR_7 &kp FR_8 &kp FR_9 &kp FR_0
 			&kp FR_PERC &kp FR_HASH &kp FR_EURO &kp FR_UNDS &kp FR_LPRN  	&kp FR_QUES &kp FR_AT &kp FR_PLUS &kp FR_ASTR &kp FR_DQUO
-			&kp FR_BSLS &kp FR_AMPR &kp FR_DLR &kp FR_PIPE &kp FR_RPRN 		&kp FR_EXLM &kp FR_EQL &kp FR_MINS &kp FR_SLSH &kp FR_I
+			&kp FR_BSLS &kp FR_AMPR &kp FR_DLR &kp FR_PIPE &kp FR_RPRN 		&kp FR_EXLM &kp FR_EQL &kp FR_MINS &kp FR_SLSH &kp FR_SCLN
 													&mo FNC  &mo SYM2   	&trans &trans
 			>;
 		};
