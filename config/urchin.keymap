@@ -19,7 +19,21 @@
 #define ACCENT 5
 #define SETTINGS 6
 // -----------------
+// Majuscules accentuées
 
+#define TAPHOLD_SYMBOL(NAME, TAP, HOLD) \
+         NAME: NAME { \
+            compatible = "zmk,behavior-hold-tap"; \
+            label = ZMK_MACRO_STRINGIFY(NAME); \
+            #binding-cells = <2>; \
+            tapping-term-ms = <TAPPING_TERM>; \
+            flavor = "tap-preferred"; \
+            quick-tap-ms = <QUICK_TAP_TERM>; \
+            require-prior-idle-ms = <QUICK_TAP_TERM>; \
+            bindings = <HOLD>, <TAP>; \
+        };
+
+TAPHOLD_SYMBOL(aMgrav,     	&a_M_grav, &kp FR_AGRV)			
 &sk {
 	// don't release mods on other mods presses
 	ignore-modifiers;
@@ -71,7 +85,7 @@
     		= <&macro_press   &kp LALT>
     		, <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N4>
     		, <&macro_release &kp LALT>
-    		;
+    		;																	
 		};
 		e_trem: e_trem {
 			compatible = "zmk,behavior-macro";
@@ -237,7 +251,7 @@
 			label = "Accent";
 			bindings = <
 			&a_circ &kp FR_CCED &none &o_circ  &kp FR_EURO                &kp FR_HASH  &kp FR_DLR &kp FR_AMPR &kp FR_EXLM &u_circ 
-			&kp FR_AGRV &kp FR_EACU &kp FR_EGRV &e_circ &e_trem 		  &kp FR_PIPE &kp FR_UNDS &i_circ &i_trem &kp FR_UGRV
+			&aMgrav 0 0 &kp FR_EACU &kp FR_EGRV &e_circ &e_trem 		  &kp FR_PIPE &kp FR_UNDS &i_circ &i_trem &kp FR_UGRV
 			&none &kp FR_LABK  &kp FR_RABK &kp FR_LPRN &kp FR_RPRN        &kp FR_LBRC &kp FR_RBRC &kp FR_LCBR &kp FR_RCBR &kp FR_AT
 									&none &none                         &none &none 
 			>;
