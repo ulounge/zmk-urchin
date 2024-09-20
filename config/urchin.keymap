@@ -20,7 +20,18 @@
 #define ACCENT 5
 #define SETTINGS 6
 // -----------------
-			
+// Majuscules accentuées
+ #define TAPHOLD_SYMBOL(NAME, TAP, HOLD) \
+         NAME: NAME { \
+            compatible = "zmk,behavior-hold-tap"; \
+            label = ZMK_MACRO_STRINGIFY(NAME); \
+            #binding-cells = <2>; \
+            tapping-term-ms = <TAPPING_TERM>; \
+            flavor = "tap-preferred"; \
+            quick-tap-ms = <QUICK_TAP_TERM>; \
+            require-prior-idle-ms = <QUICK_TAP_TERM>; \
+            bindings = <HOLD>, <TAP>; \
+        };			
 &sk {
 	// don't release mods on other mods presses
 	ignore-modifiers;
@@ -143,7 +154,12 @@
 		};
 		
 	};
-#include "config.dtsi"
+
+    
+    symbols {
+        TAPHOLD_SYMBOL(aMgrav,     	&a_M_grav, &kp FR_AGRV)
+        
+        };
 	combos {
 		compatible = "zmk,combos";
 		// both right thumb keys
