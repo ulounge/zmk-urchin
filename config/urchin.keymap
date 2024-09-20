@@ -213,8 +213,8 @@
 		default_layer {
 			label = "Base";
 			bindings = <
-			&kp LS(FR_Q) FR_Q &kp LS(FR_C) FR_C &kp LS(FR_O) FR_O &kp LS(FR_P) FR_P &kp LS(FR_W) FR_W           &kp LS(FR_J) FR_J &kp LS(FR_M) FR_M  &kp LS(FR_D) FR_D     &kp LS(FR_DQUO) FR_QUOT   &kp LS(FR_Y) FR_Y 
-			&kp LS(FR_A) FR_A &kp LS(FR_S) FR_S &kp LS(FR_E) FR_E &kp LS(FR_N) FR_N &kp LS(FR_F) FR_F           &kp LS(FR_L) FR_L &kp LS(FR_R) FR_R  &kp LS(FR_T) FR_T     &qt LS(FR_I) FR_I   &kp LS(FR_U) FR_U
+			&qt LS(FR_Q) FR_Q &qt LS(FR_C) FR_C &qt LS(FR_O) FR_O &qt LS(FR_P) FR_P &qt LS(FR_W) FR_W           &qt LS(FR_J) FR_J &qt LS(FR_M) FR_M  &qt LS(FR_D) FR_D     &qt LS(FR_DQUO) FR_QUOT   &qt LS(FR_Y) FR_Y 
+			&qt LS(FR_A) FR_A &qt LS(FR_S) FR_S &qt LS(FR_E) FR_E &qt LS(FR_N) FR_N &qt LS(FR_F) FR_F           &qt LS(FR_L) FR_L &qt LS(FR_R) FR_R  &qt LS(FR_T) FR_T     &qt LS(FR_I) FR_I   &qt LS(FR_U) FR_U
 			&kp FR_W &kp FR_X &kp FR_C &kp FR_V &kp FR_B           &kp FR_N &kp FR_COMM  &kp FR_DOT  &kp FR_QUOT    &kp FR_COLN
 							           &mo EXT  &qt LSHIFT SPACE   &sl ACCENT &sl SYM
 			>;
