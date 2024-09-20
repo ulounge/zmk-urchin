@@ -21,6 +21,7 @@
 #define SETTINGS 6
 // -----------------
 // Majuscules accentuées
+ /*
  #define TAPHOLD_SYMBOL(NAME, TAP, HOLD) \
          NAME: NAME { \
             compatible = "zmk,behavior-hold-tap"; \
@@ -30,7 +31,8 @@
             flavor = "tap-preferred"; \
             quick-tap-ms = <200>; \
             bindings = <HOLD>, <TAP>; \
-        };			
+        };
+*/		
 &sk {
 	// don't release mods on other mods presses
 	ignore-modifiers;
@@ -51,14 +53,14 @@
 			quick-tap-ms = <200>;
 			bindings = <&kp>, <&kp>;
 		};
-		aMgrav: aMgrav { \
-            compatible = "zmk,behavior-hold-tap"; \
-            label = "aMgrav"; \
-            #binding-cells = <2>; \
-            tapping-term-ms = <200>; \
-            flavor = "tap-preferred"; \
-            quick-tap-ms = <200>; \
-            bindings =&a_M_grav , &kp FR_AGRV; \
+		aMgrav: aMgrav { 
+            compatible = "zmk,behavior-hold-tap"; 
+            label = "aMgrav"; 
+            #binding-cells = <2>; 
+            tapping-term-ms = <200>; 
+            flavor = "tap-preferred"; 
+            quick-tap-ms = <200>; 
+            bindings =&a_M_grav , &kp FR_AGRV;
         };
 	};
 
