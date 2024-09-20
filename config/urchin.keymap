@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include "keymap_french.h"
-#include "config.dtsi"
+
 
 // Layer definitions
 #define BASE 0
@@ -130,8 +130,6 @@
     		;
 		};
 		
-
-		
 		a_M_grav: a_M_grav {
 			compatible = "zmk,behavior-macro"; 
 			#binding-cells = <0>;
@@ -145,7 +143,7 @@
 		};
 		
 	};
-
+#include "config.dtsi"
 	combos {
 		compatible = "zmk,combos";
 		// both right thumb keys
