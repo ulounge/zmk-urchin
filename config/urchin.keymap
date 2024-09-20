@@ -56,11 +56,11 @@
 		aMgrav: aMgrav { 
             compatible = "zmk,behavior-hold-tap"; 
             label = "aMgrav"; 
-            #binding-cells = <0>; 
+            #binding-cells = <2>; 
             tapping-term-ms = <200>; 
             flavor = "tap-preferred"; 
             quick-tap-ms = <200>; 
-            bindings = <&a_M_grav> , <&kp FR_AGRV>;
+            bindings = <&a_M_grav> , <&kp>;
         };
 	};
 
@@ -264,7 +264,7 @@
 			label = "Accent";
 			bindings = <
 			&a_circ &kp FR_CCED &none &o_circ  &kp FR_EURO                &kp FR_HASH  &kp FR_DLR &kp FR_AMPR &kp FR_EXLM &u_circ 
-			&aMgrav &kp FR_EACU &kp FR_EGRV &e_circ &e_trem 		  &kp FR_PIPE &kp FR_UNDS &i_circ &i_trem &kp FR_UGRV
+			&aMgrav 0 FR_AGRV  &kp FR_EACU &kp FR_EGRV &e_circ &e_trem 		  &kp FR_PIPE &kp FR_UNDS &i_circ &i_trem &kp FR_UGRV
 			&none &kp FR_LABK  &kp FR_RABK &kp FR_LPRN &kp FR_RPRN        &kp FR_LBRC &kp FR_RBRC &kp FR_LCBR &kp FR_RCBR &kp FR_AT
 									&none &none                         &none &none 
 			>;
