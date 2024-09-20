@@ -1,6 +1,6 @@
 // Majuscules accentuées
-
-#define TAPHOLD_SYMBOL(NAME, TAP, HOLD) \
+/ {
+    #define TAPHOLD_SYMBOL(NAME, TAP, HOLD) \
          NAME: NAME { \
             compatible = "zmk,behavior-hold-tap"; \
             label = ZMK_MACRO_STRINGIFY(NAME); \
@@ -11,5 +11,10 @@
             require-prior-idle-ms = <QUICK_TAP_TERM>; \
             bindings = <HOLD>, <TAP>; \
         };
-
-TAPHOLD_SYMBOL(aMgrav,     	&a_M_grav, &kp FR_AGRV)
+    
+    symbols {
+        TAPHOLD_SYMBOL(aMgrav,     	&a_M_grav, &kp FR_AGRV)
+        
+        };
+        
+    };
