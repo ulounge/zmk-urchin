@@ -19,19 +19,8 @@
 #define FNC 4
 #define SETTINGS 5
 // -----------------
-// Majuscules accentuées
- /*
- #define TAPHOLD_SYMBOL(NAME, TAP, HOLD) \
-         NAME: NAME { \
-            compatible = "zmk,behavior-hold-tap"; \
-            label = ZMK_MACRO_STRINGIFY(NAME); \
-            #binding-cells = <2>; \
-            tapping-term-ms = <200>; \
-            flavor = "tap-preferred"; \
-            quick-tap-ms = <200>; \
-            bindings = <HOLD>, <TAP>; \
-        };
-*/		
+
+	
 &sk {
 	// don't release mods on other mods presses
 	ignore-modifiers;
@@ -52,6 +41,11 @@
 			quick-tap-ms = <200>;
 			bindings = <&kp>, <&kp>;
 		};
+
+
+		// Majuscules accentuées
+
+		// Hold tap on accents to Maj
 		aMgrav: aMgrav { 
             compatible = "zmk,behavior-hold-tap"; 
             label = "aMgrav"; 
@@ -126,6 +120,10 @@
 			#binding-cells = <0>;
 			bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
 		};
+
+		// Accents macro
+
+
 		a_e: a_e {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
@@ -198,9 +196,7 @@
 			wait-ms = <40>;
 			tap-ms = <40>;
 			bindings
-    		= <&macro_press   &kp LALT>
-    		, <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N8>
-    		, <&macro_release &kp LALT>
+    		= <&macro_tap     &kp FR_CIRC &kp FR_I>
     		;
 		};
 		i_trem: i_trem {
@@ -210,7 +206,7 @@
 			tap-ms = <40>;
 			bindings
     		= <&macro_press   &kp LALT>
-    		, <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N9>
+    		, <&macro_tap     &kp FR_DIAE &kp FR_I>
     		, <&macro_release &kp LALT>
     		;
 		};
@@ -243,9 +239,10 @@
 			wait-ms = <40>;
 			tap-ms = <40>;
 			bindings
-    		= <&macro_press   &kp LALT>
-    		, <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N6>
-    		, <&macro_release &kp LALT>
+    		= <&macro_tap     &kp FR_CIRC>
+			, <&macro_press   &kp LS>
+    		, <&macro_tap     &kp FR_I>
+    		, <&macro_release &kp LS>
     		;
 		};
 		o_M_circ: o_M_circ {
@@ -265,7 +262,7 @@
 			wait-ms = <40>;
 			tap-ms = <40>;
 			bindings
-    		= <&macro_press   &kp LALT>
+    		= &kp FR_I<&macro_press   &kp LALT>
     		, <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N2>
     		, <&macro_release &kp LALT>
     		;
@@ -303,16 +300,11 @@
     		, <&macro_release &kp LALT>
     		;
 		};
+
+		// TO DO Macro for Fancy zones
 		
 	};
 
-    
-    /*
-	symbols {
-        TAPHOLD_SYMBOL(aMgrav,&kp FR_AGRV,&a_M_grav )
-        
-        };
-		*/
 	combos {
 		compatible = "zmk,combos";
 		// both left thumb keys
@@ -358,7 +350,7 @@
 			label = "Num";
 			bindings = <
 			&kp FR_1 &kp FR_2 &kp FR_3 &kp FR_4 &kp FR_5			&kp FR_6 &kp FR_7 &kp FR_8 &kp FR_9 &kp FR_0
-			&none &none &kp FR_PND &kp FR_GRV &kp FR_CIRC  			&none &kp FR_PERC &kp FR_PLUS &kp FR_ASTR &none
+			&none &kp FR_PND &kp FR_DIAE &kp FR_GRV &kp FR_CIRC  	&none &kp FR_PERC &kp FR_PLUS &kp FR_ASTR &none
 			&none &none &kp FR_TILD &kp FR_LPRN &kp FR_RPRN	 		&none &kp FR_EQL &kp FR_MINS &kp FR_SLSH &kp FR_BSLS
 													&mo FNC  &trans   	&trans &trans
 			>;
@@ -401,6 +393,24 @@
 
 /*
 NOT USED
+ /*
+ #define TAPHOLD_SYMBOL(NAME, TAP, HOLD) \
+         NAME: NAME { \
+            compatible = "zmk,behavior-hold-tap"; \
+            label = ZMK_MACRO_STRINGIFY(NAME); \
+            #binding-cells = <2>; \
+            tapping-term-ms = <200>; \
+            flavor = "tap-preferred"; \
+            quick-tap-ms = <200>; \
+            bindings = <HOLD>, <TAP>; \
+        };
+*/	
+    /*
+	symbols {
+        TAPHOLD_SYMBOL(aMgrav,&kp FR_AGRV,&a_M_grav )
+        
+        };
+		*/
 a_trem: a_trem {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
