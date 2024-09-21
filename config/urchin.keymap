@@ -402,7 +402,7 @@
 
 /*
 NOT USED
- /*
+ 
  #define TAPHOLD_SYMBOL(NAME, TAP, HOLD) \
          NAME: NAME { \
             compatible = "zmk,behavior-hold-tap"; \
@@ -413,13 +413,12 @@ NOT USED
             quick-tap-ms = <200>; \
             bindings = <HOLD>, <TAP>; \
         };
-*/	
-    /*
+
 	symbols {
         TAPHOLD_SYMBOL(aMgrav,&kp FR_AGRV,&a_M_grav )
         
         };
-		*/
+
 a_trem: a_trem {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
