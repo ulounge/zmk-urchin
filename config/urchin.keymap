@@ -181,9 +181,7 @@
 			wait-ms = <40>;
 			tap-ms = <40>;
 			bindings
-    		= <&macro_press   &kp LS>
-			, <&macro_tap     &kp RALT(FR_EACU) &kp FR_E>
-			, <&macro_release &kp LS>
+    		= <&macro_tap     &kp RALT(FR_EACU) &kp LS(FR_E)>
     		;																	
 		};
 		e_trem: e_trem {
