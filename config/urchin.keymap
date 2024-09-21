@@ -181,7 +181,8 @@
 			wait-ms = <40>;
 			tap-ms = <40>;
 			bindings
-    		= <&macro_tap     &kp RALT(FR_EACU) &kp LS(FR_E)>
+			/*= <&macro_tap     &kp RALT(FR_EACU) &kp LS(FR_E)>*/
+			= <&macro_tap     &kp FR_CIRC &kp LS(FR_E)>
     		;																	
 		};
 		e_trem: e_trem {
