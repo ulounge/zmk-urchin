@@ -199,6 +199,15 @@
     		= <&macro_tap     &kp FR_CIRC &kp FR_I>
     		;
 		};
+		i_M_circ: i_M_circ {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <40>;
+			tap-ms = <40>;
+			bindings
+    		= <&macro_tap     &kp FR_CIRC &kp LS(FR_I)>
+    		;
+		};
 		i_trem: i_trem {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
@@ -233,7 +242,7 @@
     		, <&macro_release &kp LALT>
     		;
 		};
-		i_M_circ: i_M_circ {
+		/*i_M_circ: i_M_circ {
 			compatible = "zmk,behavior-macro"; 
 			#binding-cells = <0>;
 			wait-ms = <40>;
@@ -244,7 +253,7 @@
     		, <&macro_tap     &kp FR_I>
     		, <&macro_release &kp LS>
     		;
-		};
+		};*/
 		o_M_circ: o_M_circ {
 			compatible = "zmk,behavior-macro"; 
 			#binding-cells = <0>;
