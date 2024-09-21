@@ -13,12 +13,11 @@
 
 // Layer definitions
 #define BASE 0
-#define SYM 1
-#define EXT 2
-#define FNC 3
-#define SYM2 4
-#define ACCENT 5
-#define SETTINGS 6
+#define ACCENT 1
+#define NUM 2
+#define EXT 3
+#define FNC 4
+#define SETTINGS 5
 // -----------------
 // Majuscules accentuées
  /*
@@ -316,18 +315,6 @@
 		*/
 	combos {
 		compatible = "zmk,combos";
-		// both right thumb keys
-		combo_accent {
-			timeout-ms = <200>;
-			key-positions = <32 33>;
-			bindings = <&mo ACCENT>;
-		};
-		// internal-left & external-right thumb keys
-		combo_sym2 {
-			timeout-ms = <200>;
-			key-positions = <31 33>;
-			bindings = <&mo SYM2>;
-		};
 		// both left thumb keys
 		combo_settings {
 			timeout-ms = <200>;
@@ -335,7 +322,7 @@
 			bindings = <&mo SETTINGS>;
 		};
 		// left index & middle fingers (home-row)
-		// hold control & space for Adobe workflow
+		// hold space for Figma...
 		combo_ctrl_space {
 			timeout-ms = <200>;
 			key-positions = <12 13>;
@@ -353,18 +340,27 @@
 			&qt LS(FR_Q) FR_Q &qt LS(FR_C) FR_C &qt LS(FR_O) FR_O &qt LS(FR_P) FR_P &qt LS(FR_W) FR_W           &qt LS(FR_J) FR_J &qt LS(FR_M) FR_M  &qt LS(FR_D) FR_D     &qt FR_DQUO FR_QUOT   &qt LS(FR_Y) FR_Y 
 			&qt LS(FR_A) FR_A &qt LS(FR_S) FR_S &qt LS(FR_E) FR_E &qt LS(FR_N) FR_N &qt LS(FR_F) FR_F           &qt LS(FR_L) FR_L &qt LS(FR_R) FR_R  &qt LS(FR_T) FR_T     &qt LS(FR_I) FR_I   &qt LS(FR_U) FR_U
 			&qt LS(FR_Z) FR_Z &qt LS(FR_X) FR_X &qt FR_QUES FR_MINS &qt LS(FR_V) FR_V &qt LS(FR_B) FR_B           &qt FR_COLN FR_DOT &qt LS(FR_H) FR_H  &qt LS(FR_G) FR_G  &qt FR_SCLN FR_COMM    &qt LS(FR_K) FR_K
-							           &mo EXT  &qt LSHIFT SPACE   &sl ACCENT &sl SYM
+							           &mo EXT  &qt LSHIFT SPACE   &sl ACCENT &sl NUM
 			>;
 		};
-
+		// Used to type french accents and high frequency symbols
+		accent_layer {
+			label = "Accent";
+			bindings = <
+			&a_circ 			&cMcced 0 FR_CCED 	&o_e 				&oMcirc 0 0  	&kp FR_EURO         &kp FR_HASH  &kp FR_DLR  &kp FR_AMPR &kp FR_EXLM &u_circ 
+			&aMgrav 0 FR_AGRV  	&eMeacu 0 FR_EACU 	&eMgrav 0 FR_EGRV 	&eMcirc 0 0 	&e_trem 		  	&kp FR_PIPE  &kp FR_UNDS &iMcirc 0 0 &i_trem 	 &kp FR_UGRV
+			&a_e 				&kp FR_LABK  		&kp FR_RABK 		&kp FR_LPRN 	&kp FR_RPRN         &kp FR_LBRC  &kp FR_RBRC &kp FR_LCBR &kp FR_RCBR &kp FR_AT
+																						&mo FNC  &trans   	&trans &trans 
+			>;
+		};
 		// Numbers and high frequency symbols
-		sym_layer {
-			label = "Sym.";
+		num_layer {
+			label = "Num";
 			bindings = <
 			&kp FR_1 &kp FR_2 &kp FR_3 &kp FR_4 &kp FR_5			&kp FR_6 &kp FR_7 &kp FR_8 &kp FR_9 &kp FR_0
 			&none &none &kp FR_PND &kp FR_GRV &kp FR_CIRC  			&none &kp FR_PERC &kp FR_PLUS &kp FR_ASTR &none
 			&none &none &kp FR_TILD &kp FR_LPRN &kp FR_RPRN	 		&none &kp FR_EQL &kp FR_MINS &kp FR_SLSH &kp FR_BSLS
-													&mo FNC  &mo SYM2   	&trans &trans
+													&mo FNC  &trans   	&trans &trans
 			>;
 		};
 
@@ -386,29 +382,7 @@
 			&kp F1 &kp F2 &kp F3 &kp F4 &kp F5                  		&kp F6 &kp F7 &kp F8 &kp F9 &kp F10 
 			&sk LALT &sk LGUI &sk LSHIFT &sk LCTRL &sk RALT     		&kp F11 &kp F12  &none &kp LC(HOME) &kp LC(PG_DN)
 			&kp PRINTSCREEN &none &kp C_PREV &kp C_PP  &kp C_NEXT		&kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &none &kp LC(PG_UP)
-							  							&none &none     &none &none  
-			>;
-		};
-
-		// Low frequency symbols.
-		symbols_2_layer {
-			label = "Sym.2";
-			bindings = <
-			&none &none &none &none &none        &none &none &none &none &none 
-			&none &none &none &none &none        &none &none &none &none &none
-			&none &none &none &none &none		 &none &none &none &none &none
-							&none &none        &none &none 
-			>;
-		};
-
-		// Used to type regional accents.
-		accent_layer {
-			label = "Accent";
-			bindings = <
-			&a_circ 			&cMcced 0 FR_CCED 	&o_e 				&oMcirc 0 0  	&kp FR_EURO         &kp FR_HASH  &kp FR_DLR  &kp FR_AMPR &kp FR_EXLM &u_circ 
-			&aMgrav 0 FR_AGRV  	&eMeacu 0 FR_EACU 	&eMgrav 0 FR_EGRV 	&eMcirc 0 0 	&e_trem 		  	&kp FR_PIPE  &kp FR_UNDS &iMcirc 0 0 &i_trem 	 &kp FR_UGRV
-			&a_e 				&kp FR_LABK  		&kp FR_RABK 		&kp FR_LPRN 	&kp FR_RPRN         &kp FR_LBRC  &kp FR_RBRC &kp FR_LCBR &kp FR_RCBR &kp FR_AT
-																						&none &none         &none &none 
+							  							&trans &trans   &trans &trans  
 			>;
 		};
 
@@ -419,7 +393,7 @@
 				&bootloader &none &none &bt BT_CLR &bt BT_SEL 0               &bt BT_SEL 3 &none &unstick &none &bootloader 
 				&none &none &none &none      &bt BT_SEL 1 						  &bt BT_SEL 4 &none &none &none &none
 				&none &none &none &none      &bt BT_SEL 2               &bt BT_SEL 5 &none &none &none &none
-										&none &none                         &none &none 
+										&trans &trans   				&trans &trans 
 				>;
 		};
 	};
