@@ -89,7 +89,7 @@
             tapping-term-ms = <200>; 
             flavor = "tap-preferred"; 
             quick-tap-ms = <200>; 
-            bindings = <&kp RA(LS(FR_EACU))> , <&kp>;
+            bindings =<&e_M_eacu> , <&kp>;
         };
 		eMgrav: eMgrav { 
             compatible = "zmk,behavior-hold-tap"; 
@@ -175,15 +175,6 @@
     		= <&macro_tap     &kp FR_CIRC &kp LS(FR_E)>
     		;																	
 		};
-		/*e_M_eacu: e_M_eacu {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
-			bindings
-			= <&macro_tap     &kp RA(LS(FR_EACU)) >
-    		;																	
-		};*/
 		e_trem: e_trem {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
@@ -296,7 +287,7 @@
     		, <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N2>
     		, <&macro_release &kp LALT>
     		;
-		};
+		};*/
 		e_M_eacu: e_M_eacu {
 			compatible = "zmk,behavior-macro"; 
 			#binding-cells = <0>;
@@ -307,7 +298,7 @@
     		, <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N1>
     		, <&macro_release &kp LALT>
     		;
-		};*/
+		};
 		e_M_grav: e_M_grav {
 			compatible = "zmk,behavior-macro"; 
 			#binding-cells = <0>;
@@ -353,7 +344,7 @@
 		};
 	};
 
-	keymap {
+	keymap {àÀ
 		compatible = "zmk,keymap";
 		// Base alpha layer
 		default_layer {
