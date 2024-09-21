@@ -89,7 +89,7 @@
             tapping-term-ms = <200>; 
             flavor = "tap-preferred"; 
             quick-tap-ms = <200>; 
-            bindings = <&e_M_eacu> , <&kp>;
+            bindings = <&kp RA(LS(FR_EACU)> , <&kp>;
         };
 		eMgrav: eMgrav { 
             compatible = "zmk,behavior-hold-tap"; 
@@ -181,8 +181,7 @@
 			wait-ms = <40>;
 			tap-ms = <40>;
 			bindings
-			/*= <&macro_tap     &kp RALT(FR_EACU) &kp LS(FR_E)>*/
-			= <&macro_tap     &kp RA(FR_EACU) &kp LS(FR_E)>
+			= <&macro_tap     &kp RA(LS(FR_EACU)) >
     		;																	
 		};
 		e_trem: e_trem {
