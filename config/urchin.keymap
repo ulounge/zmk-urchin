@@ -271,7 +271,7 @@
 			wait-ms = <40>;
 			tap-ms = <40>;
 			bindings
-    		= &kp FR_I<&macro_press   &kp LALT>
+    		= <&macro_press   &kp LALT>
     		, <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N2>
     		, <&macro_release &kp LALT>
     		;
