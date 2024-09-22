@@ -341,7 +341,7 @@
 
 		// Function keys with modifiers
 		fnc_layer {
-			display-name = "FRow";
+			display-name = "Func.";
 			bindings = <
 			&kp F1 &kp F2 &kp F3 &kp F4 &kp F5                  																				&kp F6 &kp F7 &kp F8 &kp F9 &kp F10 
 			&kp LC(LA(LG(FR_AMPR))) &kp LC(LA(LG(FR_EACU))) &kp LC(LA(LG(FR_DQUO))) &kp LC(LA(LG(FR_QUOT))) &kp LC(LA(LG(FR_LPRN)))    		&kp LC(RA(KP_N2)) &kp LC(RA(KP_N8)) &kp LC(RA(KP_N4)) &kp F11 &kp F12
