@@ -357,9 +357,9 @@
 		ext_layer {
 			label = "Mods";
 			bindings = <
-			&kp ESC  &kp LC(LA(LG(FR_AMPR))) 	&none &none &none    						&kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
-			&sk LALT &sk LGUI  &sk LSHIFT  &sk LCTRL  &sk RALT 			&kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
-			&kp LC(FR_Z)  &kp LC(X) &kp LC(C) &kp LC(V) &kp TAB          &kp LC(BSPC) &kp BSPC &none &none &none
+			&kp ESC   &none	&none &none &none    						&kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
+			&sk LALT &sk LGUI &sk LSHIFT &sk LCTRL &sk RALT  			&kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
+			&kp LC(FR_Z)  &kp LC(X) &kp LC(C) &kp LC(V) &kp TAB         &kp LC(BSPC) &kp BSPC &none &none &none
 													&trans &kp LCTRL    &kp ENTER  &mo FNC 
 			>;
 		};
@@ -368,10 +368,10 @@
 		fnc_layer {
 			label = "FRow";
 			bindings = <
-			&kp F1 &kp F2 &kp F3 &kp F4 &kp F5                  		&kp F6 &kp F7 &kp F8 &kp F9 &kp F10 
-			&sk LALT &sk LGUI &sk LSHIFT &sk LCTRL &sk RALT     		&kp F11 &kp F12  &none &kp LC(HOME) &kp LC(PG_DN)
-			&kp PRINTSCREEN &none &kp C_PREV &kp C_PP  &kp C_NEXT		&kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &none &kp LC(PG_UP)
-							  							&trans &trans   &trans &trans  
+			&kp F1 &kp F2 &kp F3 &kp F4 &kp F5                  																&kp F6 &kp F7 &kp F8 &kp F9 &kp F10 
+			&kp LC(LA(LG(FR_AMPR))) LC(LA(LG(FR_EACU)))  LC(LA(LG(FR_DQUO)))  LC(LA(LG(FR_QUOT)))  LC(LA(LG(FR_LPRN)))    		&kp LC(RA(FR_AMPR)) &kp LC(RA(FR_DQUO)) &kp LC(RA(FR_QUOT)) &kp F11 &kp F12
+			&kp PRINTSCREEN &none &kp C_PREV &kp C_PP  &kp C_NEXT																&kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &none &none
+							  							&trans &trans   														&trans &trans  
 			>;
 		};
 
