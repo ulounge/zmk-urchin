@@ -275,7 +275,7 @@
     		, <&macro_release &kp LALT>
     		;
 		};
-
+	};
 
 	combos {
 		compatible = "zmk,combos";
