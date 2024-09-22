@@ -285,7 +285,15 @@
 		};
 
 		// TO DO Macro for Fancy zones
-		
+		sc_1: sc_1 {
+			compatible = "zmk,behavior-macro"; 
+			#binding-cells = <0>;
+			wait-ms = <40>;
+			tap-ms = <40>;
+			bindings
+    		= <&macro_tap     &kp LC(LALT(LG(FR_AMPR)))>
+    		;
+		};
 	};
 
 	combos {
@@ -343,7 +351,7 @@
 		ext_layer {
 			label = "Mods";
 			bindings = <
-			&kp ESC  &none 	&none &none &none    						&kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
+			&kp ESC  &sc_1 	&none &none &none    						&kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
 			&sk LALT &sk LGUI  &sk LSHIFT  &sk LCTRL  &sk RALT 			&kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
 			&kp LC(FR_Z)  &kp LC(X) &kp LC(C) &kp LC(V) &kp TAB          &kp LC(BSPC) &kp BSPC &none &none &none
 													&trans &kp LCTRL    &kp ENTER  &mo FNC 
