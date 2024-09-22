@@ -34,7 +34,6 @@
 		// To use it: "&qt KEYCODE1 KEYCODE2"
 		qt: quick_tap {
 			compatible = "zmk,behavior-hold-tap";
-			label = "QUICK_TAP";
 			#binding-cells = <2>;
 			flavor = "hold-preferred";
 			tapping-term-ms = <200>;
@@ -48,7 +47,6 @@
 		// Hold tap on accents to Maj
 		aMgrav: aMgrav { 
             compatible = "zmk,behavior-hold-tap"; 
-            label = "aMgrav"; 
             #binding-cells = <2>; 
             tapping-term-ms = <200>; 
             flavor = "tap-preferred"; 
@@ -57,7 +55,6 @@
         };
 		iMcirc: iMcirc { 
             compatible = "zmk,behavior-hold-tap"; 
-            label = "iMcirc"; 
             #binding-cells = <2>; 
             tapping-term-ms = <200>; 
             flavor = "tap-preferred"; 
@@ -66,7 +63,6 @@
         };
 		oMcirc: oMcirc { 
             compatible = "zmk,behavior-hold-tap"; 
-            label = "oMcirc"; 
             #binding-cells = <2>; 
             tapping-term-ms = <200>; 
             flavor = "tap-preferred"; 
@@ -75,7 +71,6 @@
         };
 		eMcirc: eMcirc { 
             compatible = "zmk,behavior-hold-tap"; 
-            label = "eMcirc"; 
             #binding-cells = <2>; 
             tapping-term-ms = <200>; 
             flavor = "tap-preferred"; 
@@ -84,7 +79,6 @@
         };
 		eMeacu: eMeacu { 
             compatible = "zmk,behavior-hold-tap"; 
-            label = "eMeacu"; 
             #binding-cells = <2>; 
             tapping-term-ms = <200>; 
             flavor = "tap-preferred"; 
@@ -93,7 +87,6 @@
         };
 		eMgrav: eMgrav { 
             compatible = "zmk,behavior-hold-tap"; 
-            label = "eMgrav"; 
             #binding-cells = <2>; 
             tapping-term-ms = <200>; 
             flavor = "tap-preferred"; 
@@ -102,7 +95,6 @@
         };
 		cMcced: cMcced { 
             compatible = "zmk,behavior-hold-tap"; 
-            label = "cMcced"; 
             #binding-cells = <2>; 
             tapping-term-ms = <200>; 
             flavor = "tap-preferred"; 
@@ -115,7 +107,6 @@
 		// sometimes my device thinks a modifier is being held down
 		// pressing all modifiers fixes it.
 		unstick: unstick {
-			label = "ZM_unstick";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
@@ -286,22 +277,6 @@
 		};
 
 
-
-		// TO DO Macro for Fancy zones
-
-
-
-		/*sc_1: sc_1 {
-			compatible = "zmk,behavior-macro"; 
-			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
-			bindings
-    		= <&macro_tap     &kp LC(LA(LG(FR_AMPR)))>
-    		;
-		};*/
-	};
-
 	combos {
 		compatible = "zmk,combos";
 		// both left thumb keys
@@ -324,7 +299,7 @@
 		compatible = "zmk,keymap";
 		// Base alpha layer
 		default_layer {
-			label = "Base";
+			display-name = "Base";
 			bindings = <
 			&qt LS(FR_Q) FR_Q &qt LS(FR_C) FR_C &qt LS(FR_O) FR_O &qt LS(FR_P) FR_P &qt LS(FR_W) FR_W           &qt LS(FR_J) FR_J &qt LS(FR_M) FR_M  &qt LS(FR_D) FR_D     &qt FR_DQUO FR_QUOT   &qt LS(FR_Y) FR_Y 
 			&qt LS(FR_A) FR_A &qt LS(FR_S) FR_S &qt LS(FR_E) FR_E &qt LS(FR_N) FR_N &qt LS(FR_F) FR_F           &qt LS(FR_L) FR_L &qt LS(FR_R) FR_R  &qt LS(FR_T) FR_T     &qt LS(FR_I) FR_I   &qt LS(FR_U) FR_U
@@ -334,7 +309,7 @@
 		};
 		// Used to type french accents and high frequency symbols
 		accent_layer {
-			label = "Accent";
+			display-name = "Accent";
 			bindings = <
 			&a_circ 			&cMcced 0 FR_CCED 	&o_e 				&oMcirc 0 0  	&kp FR_EURO         &kp FR_HASH  &kp FR_DLR  &kp FR_AMPR &kp FR_EXLM &u_circ 
 			&aMgrav 0 FR_AGRV  	&eMeacu 0 FR_EACU 	&eMgrav 0 FR_EGRV 	&eMcirc 0 0 	&e_trem 		  	&kp FR_PIPE  &kp FR_UNDS &iMcirc 0 0 &i_trem 	 &kp FR_UGRV
@@ -344,7 +319,7 @@
 		};
 		// Numbers and high frequency symbols
 		num_layer {
-			label = "Num";
+			display-name = "Num";
 			bindings = <
 			&kp FR_1 &kp FR_2 &kp FR_3 &kp FR_4 &kp FR_5			&kp FR_6 &kp FR_7 &kp FR_8 &kp FR_9 &kp FR_0
 			&none &kp FR_PND &kp FR_DIAE &kp FR_GRV &kp FR_CIRC  	&none &kp FR_PERC &kp FR_PLUS &kp FR_ASTR &none
@@ -355,7 +330,7 @@
 
 		// Main modifiers and arrow keys
 		ext_layer {
-			label = "Mods";
+			display-name = "Mods";
 			bindings = <
 			&kp ESC   &none	&none &none &none    						&kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
 			&sk LALT &sk LGUI &sk LSHIFT &sk LCTRL &sk RALT  			&kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
@@ -366,7 +341,7 @@
 
 		// Function keys with modifiers
 		fnc_layer {
-			label = "FRow";
+			display-name = "FRow";
 			bindings = <
 			&kp F1 &kp F2 &kp F3 &kp F4 &kp F5                  																				&kp F6 &kp F7 &kp F8 &kp F9 &kp F10 
 			&kp LC(LA(LG(FR_AMPR))) &kp LC(LA(LG(FR_EACU))) &kp LC(LA(LG(FR_DQUO))) &kp LC(LA(LG(FR_QUOT))) &kp LC(LA(LG(FR_LPRN)))    		&kp LC(RA(KP_N2)) &kp LC(RA(KP_N8)) &kp LC(RA(KP_N4)) &kp F11 &kp F12
@@ -377,7 +352,7 @@
 
 		// Used to change the keyboard's settings.
 		settings_layer {
-				label = "Sett.";
+				display-name = "Sett.";
 				bindings = <
 				&bootloader &none &none &bt BT_CLR &bt BT_SEL 0               &bt BT_SEL 3 &none &unstick &none &bootloader 
 				&none &none &none &none      &bt BT_SEL 1 						  &bt BT_SEL 4 &none &none &none &none
@@ -387,7 +362,6 @@
 		};
 	};
 };
-
 /*
 NOT USED
  
