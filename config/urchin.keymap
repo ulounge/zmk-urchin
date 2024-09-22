@@ -131,9 +131,7 @@
 			wait-ms = <40>;
 			tap-ms = <40>;
 			bindings
-    		= <&macro_press   &kp LALT>
-    		, <&macro_tap     &kp FR_CIRC &kp FR_A>
-    		, <&macro_release &kp LALT>
+    		= <&macro_tap     &kp FR_CIRC &kp FR_A>
     		;
 		};
 		e_circ: e_circ {
@@ -169,9 +167,7 @@
 			wait-ms = <40>;
 			tap-ms = <40>;
 			bindings
-    		= <&macro_press   &kp LALT>
-    		, <&macro_tap     &kp FR_DIAE &kp FR_E>
-    		, <&macro_release &kp LALT>
+    		= <&macro_tap     &kp FR_DIAE &kp FR_E>
     		;
 		};
 		u_circ: u_circ {
@@ -180,9 +176,7 @@
 			wait-ms = <40>;
 			tap-ms = <40>;
 			bindings
-    		= <&macro_press   &kp LALT>
-    		, <&macro_tap     &kp FR_CIRC &kp FR_U>
-    		, <&macro_release &kp LALT>
+    		= <&macro_tap     &kp FR_CIRC &kp FR_U>
     		;
 		};
 		i_circ: i_circ {
@@ -229,8 +223,7 @@
 			bindings
     		= <&macro_tap     &kp FR_CIRC &kp LS(FR_O)>
     		;
-		};
-		
+		};	
 		a_M_grav: a_M_grav {
 			compatible = "zmk,behavior-macro"; 
 			#binding-cells = <0>;
