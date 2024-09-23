@@ -344,8 +344,8 @@
 			display-name = "Func.";
 			bindings = <
 			&kp F1 &kp F2 &kp F3 &kp F4 &kp F5                  																				&kp F6 &kp F7 &kp F8 &kp F9 &kp F10 
-			&kp LC(LA(LG(FR_AMPR))) &kp LC(LA(LG(FR_EACU))) &kp LC(LA(LG(FR_DQUO))) &kp LC(LA(LG(FR_QUOT))) &kp LC(LA(LG(FR_LPRN)))    		&kp LA(LS(F)) &kp LA(LS(D)) &kp LA(LS(G)) &kp F11 &kp F12
-			&kp PRINTSCREEN &none &kp C_PREV &kp C_PP  &kp C_NEXT																&kp LA(LS(J)) &kp LA(LS(H)) &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP 
+			&kp LC(LA(LG(FR_AMPR))) &kp LC(LA(LG(FR_EACU))) &kp LC(LA(LG(FR_DQUO))) &kp LC(LA(LG(FR_QUOT))) &kp LC(LA(LG(FR_LPRN)))    		&kp RS(RA(KP_N8)) &kp RS(RA(KP_N5)) &kp RS(RA(KP_N0)) &kp F11 &kp F12
+			&kp PRINTSCREEN &none &kp C_PREV &kp C_PP  &kp C_NEXT																&kp RS(RA(KP_N9)) &kp RS(RA(KP_N7)) &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP 
 							  							&trans &trans   														&trans &trans  
 			>;
 		};
