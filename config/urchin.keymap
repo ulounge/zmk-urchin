@@ -322,7 +322,7 @@
 			display-name = "Num";
 			bindings = <
 			&none &none  &kp FR_GRV 	&kp FR_TILD	&kp FR_PERC			&kp FR_SLSH &kp FR_7 &kp FR_8 &kp FR_9	&kp FR_MINS
-			&none &none  &kp FR_CIRC  	&none    	&FR_DOT        		&kp FR_ASTR &kp FR_4 &kp FR_5 &kp FR_6 	&kp FR_PLUS
+			&none &none  &kp FR_CIRC  	&none    	&kp FR_DOT        	&kp FR_ASTR &kp FR_4 &kp FR_5 &kp FR_6 	&kp FR_PLUS
 			&none &none  &kp FR_DIAE 	&kp FR_LPRN &kp FR_RPRN	 		&kp FR_0 	&kp FR_1 &kp FR_2 &kp FR_3 	&kp FR_EQL
 													&mo FNC  &trans   	&trans &trans
 			>;
