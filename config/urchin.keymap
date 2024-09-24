@@ -313,7 +313,7 @@
 			bindings = <
 			&a_circ 			&cMcced 0 FR_CCED 	&o_e 				&oMcirc 0 0  			&kp FR_EURO         		&kp FR_HASH  		&qt FR_PND FR_DLR 	&kp FR_AMPR 	&kp FR_EXLM 	&u_circ 
 			&aMgrav 0 FR_AGRV  	&eMeacu 0 FR_EACU 	&eMgrav 0 FR_EGRV 	&eMcirc 0 0 			&e_trem 		  			&kp FR_PIPE  		&kp FR_UNDS 		&iMcirc 0 0 	&i_trem 	 	&kp FR_UGRV
-			&a_e 				&kp FR_BSLS   		&kp FR_SLSH 		&qt FR_LABK FR_LPRN 	&qt FR_RABK FR_RPRN         &qt FR_RBRC FR_LBRC &qt FR_RCBR FR_LCBR &none  			&none  			&kp FR_AT
+			&a_e 				&kp FR_BSLS   		&kp FR_SLSH 		&qt FR_LABK FR_LPRN 	&qt FR_RABK FR_RPRN         &qt FR_LCBR FR_LBRC &qt FR_RCBR FR_RBRC &none  			&none  			&kp FR_AT
 																						&mo FNC  &trans   					&trans &trans 
 			>;
 		};
