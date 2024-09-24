@@ -36,7 +36,7 @@
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
 			flavor = "tap-preferred";
-			tapping-term-ms = <400>;
+			tapping-term-ms = <350>;
 			quick-tap-ms = <200>;
 			bindings = <&kp>, <&kp>;
 		};
@@ -48,7 +48,7 @@
 		aMgrav: aMgrav { 
             compatible = "zmk,behavior-hold-tap"; 
             #binding-cells = <2>; 
-            tapping-term-ms = <200>; 
+            tapping-term-ms = <350>; 
             flavor = "tap-preferred"; 
             quick-tap-ms = <200>; 
             bindings = <&a_M_grav> , <&kp>;
@@ -56,7 +56,7 @@
 		iMcirc: iMcirc { 
             compatible = "zmk,behavior-hold-tap"; 
             #binding-cells = <2>; 
-            tapping-term-ms = <200>; 
+            tapping-term-ms = <350>; 
             flavor = "tap-preferred"; 
             quick-tap-ms = <200>; 
             bindings = <&i_M_circ> , <&i_circ>;
@@ -64,7 +64,7 @@
 		oMcirc: oMcirc { 
             compatible = "zmk,behavior-hold-tap"; 
             #binding-cells = <2>; 
-            tapping-term-ms = <200>; 
+            tapping-term-ms = <350>; 
             flavor = "tap-preferred"; 
             quick-tap-ms = <200>; 
             bindings = <&o_M_circ> , <&o_circ>;
@@ -72,7 +72,7 @@
 		eMcirc: eMcirc { 
             compatible = "zmk,behavior-hold-tap"; 
             #binding-cells = <2>; 
-            tapping-term-ms = <200>; 
+            tapping-term-ms = <350>; 
             flavor = "tap-preferred"; 
             quick-tap-ms = <200>; 
             bindings = <&e_M_circ> , <&e_circ>;
@@ -80,7 +80,7 @@
 		eMeacu: eMeacu { 
             compatible = "zmk,behavior-hold-tap"; 
             #binding-cells = <2>; 
-            tapping-term-ms = <200>; 
+            tapping-term-ms = <350>; 
             flavor = "tap-preferred"; 
             quick-tap-ms = <200>; 
             bindings =<&e_M_eacu> , <&kp>;
@@ -88,7 +88,7 @@
 		eMgrav: eMgrav { 
             compatible = "zmk,behavior-hold-tap"; 
             #binding-cells = <2>; 
-            tapping-term-ms = <200>; 
+            tapping-term-ms = <350>; 
             flavor = "tap-preferred"; 
             quick-tap-ms = <200>; 
             bindings = <&e_M_grav> , <&kp>;
@@ -96,7 +96,7 @@
 		cMcced: cMcced { 
             compatible = "zmk,behavior-hold-tap"; 
             #binding-cells = <2>; 
-            tapping-term-ms = <200>; 
+            tapping-term-ms = <350>; 
             flavor = "tap-preferred"; 
             quick-tap-ms = <200>; 
             bindings = <&c_M_cced> , <&kp>;
@@ -301,29 +301,29 @@
 		default_layer {
 			display-name = "Base";
 			bindings = <
-			&qt LS(FR_Q) FR_Q &qt LS(FR_C) FR_C &qt LS(FR_O) FR_O &qt LS(FR_P) FR_P &qt LS(FR_W) FR_W           &qt LS(FR_J) FR_J &qt LS(FR_M) FR_M  &qt LS(FR_D) FR_D     &qt FR_DQUO FR_QUOT   &qt LS(FR_Y) FR_Y 
-			&qt LS(FR_A) FR_A &qt LS(FR_S) FR_S &qt LS(FR_E) FR_E &qt LS(FR_N) FR_N &qt LS(FR_F) FR_F           &qt LS(FR_L) FR_L &qt LS(FR_R) FR_R  &qt LS(FR_T) FR_T     &qt LS(FR_I) FR_I   &qt LS(FR_U) FR_U
-			&qt LS(FR_Z) FR_Z &qt LS(FR_X) FR_X &qt FR_QUES FR_MINS &qt LS(FR_V) FR_V &qt LS(FR_B) FR_B           &qt FR_COLN FR_DOT &qt LS(FR_H) FR_H  &qt LS(FR_G) FR_G  &qt FR_SCLN FR_COMM    &qt LS(FR_K) FR_K
-							           &mo EXT  &qt LSHIFT SPACE   &sl ACCENT &sl NUM
+			&qt LS(FR_Q) FR_Q &qt LS(FR_C) FR_C &qt LS(FR_O) FR_O 	&qt LS(FR_P) FR_P &qt LS(FR_W) FR_W         &qt LS(FR_J) FR_J  &qt LS(FR_M) FR_M  &qt LS(FR_D) FR_D     &qt FR_DQUO FR_QUOT   	&qt LS(FR_Y) FR_Y 
+			&qt LS(FR_A) FR_A &qt LS(FR_S) FR_S &qt LS(FR_E) FR_E 	&qt LS(FR_N) FR_N &qt LS(FR_F) FR_F         &qt LS(FR_L) FR_L  &qt LS(FR_R) FR_R  &qt LS(FR_T) FR_T     &qt LS(FR_I) FR_I   	&qt LS(FR_U) FR_U
+			&qt LS(FR_Z) FR_Z &qt LS(FR_X) FR_X &qt FR_QUES FR_MINS &qt LS(FR_V) FR_V &qt LS(FR_B) FR_B         &qt FR_COLN FR_DOT &qt LS(FR_H) FR_H  &qt LS(FR_G) FR_G  	&qt FR_SCLN FR_COMM    	&qt LS(FR_K) FR_K
+							           											&mo EXT  &qt LSHIFT SPACE   	&sl ACCENT &sl NUM
 			>;
 		};
 		// Used to type french accents and high frequency symbols
 		accent_layer {
 			display-name = "Accent";
 			bindings = <
-			&a_circ 			&cMcced 0 FR_CCED 	&o_e 				&oMcirc 0 0  	&kp FR_EURO         &kp FR_HASH  &kp FR_DLR  &kp FR_AMPR &kp FR_EXLM &u_circ 
-			&aMgrav 0 FR_AGRV  	&eMeacu 0 FR_EACU 	&eMgrav 0 FR_EGRV 	&eMcirc 0 0 	&e_trem 		  	&kp FR_PIPE  &kp FR_UNDS &iMcirc 0 0 &i_trem 	 &kp FR_UGRV
-			&a_e 				&kp LT  		&kp GT 		&kp FR_LPRN 	&kp FR_RPRN         &kp FR_LBRC  &kp FR_RBRC &kp FR_LCBR &kp FR_RCBR &kp FR_AT
-																						&mo FNC  &trans   	&trans &trans 
+			&a_circ 			&cMcced 0 FR_CCED 	&o_e 				&oMcirc 0 0  			&kp FR_EURO         		&kp FR_HASH  		&qt FR_PND FR_DLR 	&kp FR_AMPR 	&kp FR_EXLM 	&u_circ 
+			&aMgrav 0 FR_AGRV  	&eMeacu 0 FR_EACU 	&eMgrav 0 FR_EGRV 	&eMcirc 0 0 			&e_trem 		  			&kp FR_PIPE  		&kp FR_UNDS 		&iMcirc 0 0 	&i_trem 	 	&kp FR_UGRV
+			&a_e 				&kp FR_BSLS   		&kp FR_SLSH 		&qt FR_LABK FR_LPRN 	&qt FR_RABK FR_RPRN         &qt FR_RBRC FR_LBRC &qt FR_RCBR FR_LCBR &none  			&none  			&kp FR_AT
+																						&mo FNC  &trans   					&trans &trans 
 			>;
 		};
 		// Numbers and high frequency symbols
 		num_layer {
 			display-name = "Num";
 			bindings = <
-			&kp FR_1 &kp FR_2 &kp FR_3 &kp FR_4 &kp FR_5			&kp FR_6 &kp FR_7 &kp FR_8 &kp FR_9 &kp FR_0
-			&none &kp FR_PND &kp FR_DIAE &kp FR_GRV &kp FR_CIRC  	&none &kp FR_PERC &kp FR_PLUS &kp FR_ASTR &none
-			&none &none &kp FR_TILD &kp FR_LPRN &kp FR_RPRN	 		&none &kp FR_EQL &kp FR_MINS &kp FR_SLSH &kp FR_BSLS
+			&none &none  &kp FR_GRV 	&kp FR_TILD	&kp FR_PERC			&kp FR_SLSH &kp FR_7 &kp FR_8 &kp FR_9	&kp FR_MINS
+			&none &none  &kp FR_CIRC  	&none    	&FR_DOT        		&kp FR_ASTR &kp FR_4 &kp FR_5 &kp FR_6 	&kp FR_PLUS
+			&none &none  &kp FR_DIAE 	&kp FR_LPRN &kp FR_RPRN	 		&kp FR_0 	&kp FR_1 &kp FR_2 &kp FR_3 	&kp FR_EQL
 													&mo FNC  &trans   	&trans &trans
 			>;
 		};
@@ -332,9 +332,9 @@
 		ext_layer {
 			display-name = "Mods";
 			bindings = <
-			&kp ESC   &none	&none &none &none    						&kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
-			&sk LALT &sk LGUI &sk LSHIFT &sk LCTRL &sk RALT  			&kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
-			&kp LC(FR_Z)  &kp LC(X) &kp LC(C) &kp LC(V) &kp TAB         &kp LC(BSPC) &kp BSPC &none &none &none
+			&kp ESC   	  &none		&none 	   &none	 &none    		&kp PG_UP  	 &kp HOME  &kp UP 	 &kp END 	 &kp CAPS
+			&sk LALT 	  &sk LGUI 	&sk LSHIFT &sk LCTRL &sk RALT  		&kp PG_DN 	 &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
+			&kp LC(FR_Z)  &kp LC(X) &kp LC(C)  &kp LC(V) &kp TAB        &kp LC(BSPC) &kp BSPC  &none 	 &none 		 &none
 													&trans &kp LCTRL    &kp ENTER  &mo FNC 
 			>;
 		};
@@ -343,10 +343,10 @@
 		fnc_layer {
 			display-name = "Func.";
 			bindings = <
-			&kp F1 &kp F2 &kp F3 &kp F4 &kp F5                  																				&kp F6 &kp F7 &kp F8 &kp F9 &kp F10 
-			&kp LC(LA(LG(FR_AMPR))) &kp LC(LA(LG(FR_EACU))) &kp LC(LA(LG(FR_DQUO))) &kp LC(LA(LG(FR_QUOT))) &kp LC(LA(LG(FR_LPRN)))    		&kp LC(RA(FR_X)) &kp LC(RA(FR_Y)) &kp LC(RA(FR_D)) &kp F11 &kp F12
-			&kp PRINTSCREEN &none &kp C_PREV &kp C_PP  &kp C_NEXT																&kp LC(RA(FR_U)) &kp LC(RA(FR_S)) &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP 
-							  							&trans &trans   														&trans &trans  
+			&kp F1 					&kp F2 					&kp F3 					&kp F4 					&kp F5                  		&kp F6 			 &kp F7 		  &kp F8 			&kp F9 		 &kp F10 
+			&kp LC(LA(LG(FR_AMPR))) &kp LC(LA(LG(FR_EACU))) &kp LC(LA(LG(FR_DQUO))) &kp LC(LA(LG(FR_QUOT))) &kp LC(LA(LG(FR_LPRN)))    		&kp LC(RA(FR_X)) &kp LC(RA(FR_Y)) &kp LC(RA(FR_D)) 	&kp F11		 &kp F12
+			&kp PRINTSCREEN 		&none 					&kp C_PREV 				&kp C_PP  				&kp C_NEXT						&kp LC(RA(FR_U)) &kp LC(RA(FR_S)) &kp C_MUTE 		&kp C_VOL_DN &kp C_VOL_UP 
+							  																				&trans &trans   				&trans &trans  
 			>;
 		};
 
@@ -355,9 +355,9 @@
 				display-name = "Sett.";
 				bindings = <
 				&bootloader &none &none &bt BT_CLR &bt BT_SEL 0               &bt BT_SEL 3 &none &unstick &none &bootloader 
-				&none &none &none &none      &bt BT_SEL 1 						  &bt BT_SEL 4 &none &none &none &none
-				&none &none &none &none      &bt BT_SEL 2               &bt BT_SEL 5 &none &none &none &none
-										&trans &trans   				&trans &trans 
+				&none 		&none &none &none      &bt BT_SEL 1 			  &bt BT_SEL 4 &none &none 	  &none &none
+				&none 		&none &none &none      &bt BT_SEL 2               &bt BT_SEL 5 &none &none 	  &none &none
+													&trans &trans   		  &trans &trans 
 				>;
 		};
 	};
@@ -370,7 +370,7 @@ NOT USED
             compatible = "zmk,behavior-hold-tap"; \
             label = ZMK_MACRO_STRINGIFY(NAME); \
             #binding-cells = <2>; \
-            tapping-term-ms = <200>; \
+            tapping-term-ms = <350>; \
             flavor = "tap-preferred"; \
             quick-tap-ms = <200>; \
             bindings = <HOLD>, <TAP>; \
