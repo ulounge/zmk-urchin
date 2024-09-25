@@ -29,6 +29,17 @@
 
 / {
 	behaviors {
+
+		// Enables switching between layers Function and Numbers
+		// by performing a tap-dance sequence.
+		td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&sl FNC>, <&sl NUM>;
+        };
+
+
 		// Enables holding the first mod-tap key
 		// by performing a tap-release-hold sequence.
 		// To use it: "&qt KEYCODE1 KEYCODE2"
@@ -304,7 +315,7 @@
 			&qt LS(FR_Q) FR_Q &qt LS(FR_C) FR_C &qt LS(FR_O) FR_O 	&qt LS(FR_P) FR_P &qt LS(FR_W) FR_W         &qt LS(FR_J) FR_J  &qt LS(FR_M) FR_M  &qt LS(FR_D) FR_D     &qt FR_DQUO FR_QUOT   	&qt LS(FR_Y) FR_Y 
 			&qt LS(FR_A) FR_A &qt LS(FR_S) FR_S &qt LS(FR_E) FR_E 	&qt LS(FR_N) FR_N &qt LS(FR_F) FR_F         &qt LS(FR_L) FR_L  &qt LS(FR_R) FR_R  &qt LS(FR_T) FR_T     &qt LS(FR_I) FR_I   	&qt LS(FR_U) FR_U
 			&qt LS(FR_Z) FR_Z &qt LS(FR_X) FR_X &qt FR_QUES FR_MINS &qt LS(FR_V) FR_V &qt LS(FR_B) FR_B         &qt FR_COLN FR_DOT &qt LS(FR_H) FR_H  &qt LS(FR_G) FR_G  	&qt FR_SCLN FR_COMM    	&qt LS(FR_K) FR_K
-							           											&mo EXT  &qt LSHIFT SPACE   	&sl ACCENT &sl NUM
+							           											&mo EXT  &qt LSHIFT SPACE   	&lt ACCENT ENTER &td0
 			>;
 		};
 		// Used to type french accents and high frequency symbols
@@ -314,7 +325,7 @@
 			&a_circ 			&cMcced 0 FR_CCED 	&o_e 				&oMcirc 0 0  			&kp FR_EURO         		&kp FR_HASH  		&qt FR_PND FR_DLR 	&kp FR_AMPR 	&kp FR_EXLM 	&u_circ 
 			&aMgrav 0 FR_AGRV  	&eMeacu 0 FR_EACU 	&eMgrav 0 FR_EGRV 	&eMcirc 0 0 			&e_trem 		  			&kp FR_PIPE  		&kp FR_UNDS 		&iMcirc 0 0 	&i_trem 	 	&kp FR_UGRV
 			&a_e 				&kp FR_BSLS   		&kp FR_SLSH 		&qt FR_LABK FR_LPRN 	&qt FR_RABK FR_RPRN         &qt FR_LCBR FR_LBRC &qt FR_RCBR FR_RBRC &none  			&none  			&kp FR_AT
-																						&mo FNC  &trans   					&trans &trans 
+																						&trans  &trans   					&trans &trans 
 			>;
 		};
 		// Numbers and high frequency symbols
@@ -324,7 +335,7 @@
 			&none &none  &kp FR_GRV 	&kp FR_TILD	&kp FR_PERC			&kp FR_SLSH &kp FR_7 &kp FR_8 &kp FR_9	&kp FR_MINS
 			&none &none  &kp FR_CIRC  	&none    	&kp FR_DOT        	&kp FR_ASTR &kp FR_4 &kp FR_5 &kp FR_6 	&kp FR_PLUS
 			&none &none  &kp FR_DIAE 	&kp FR_LPRN &kp FR_RPRN	 		&kp FR_0 	&kp FR_1 &kp FR_2 &kp FR_3 	&kp FR_EQL
-													&mo FNC  &trans   	&trans &trans
+													&trans  &trans   	&trans &trans
 			>;
 		};
 
@@ -335,7 +346,7 @@
 			&kp ESC   	  &none		&none 	   &none	 &none    		&kp PG_UP  	 &kp HOME  &kp UP 	 &kp END 	 &kp CAPS
 			&sk LALT 	  &sk LGUI 	&sk LSHIFT &sk LCTRL &sk RALT  		&kp PG_DN 	 &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
 			&kp LC(FR_Z)  &kp LC(X) &kp LC(C)  &kp LC(V) &kp TAB        &kp LC(BSPC) &kp BSPC  &none 	 &none 		 &none
-													&trans &kp LCTRL    &kp ENTER  &mo FNC 
+													&trans &kp LCTRL    &trans  &trans 
 			>;
 		};
 
