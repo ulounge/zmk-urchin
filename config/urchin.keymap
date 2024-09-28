@@ -115,6 +115,19 @@
 	};
 
 	macros {
+		// Turn off Windows
+		win_off: win_off {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LWIN>
+                , <&macro_tap     &kp FR_X>
+                , <&macro_release &kp LWIN>
+                , <&macro_tap     &kp FR_U &kp FR_U>
+                ;
+        };
 		// sometimes my device thinks a modifier is being held down
 		// pressing all modifiers fixes it.
 		unstick: unstick {
@@ -367,7 +380,7 @@
 				bindings = <
 				&bootloader 			&none &none &bt BT_CLR &bt BT_SEL 0               &bt BT_SEL 3 &none &unstick &none &bootloader 
 				&none 					&none &none &none      &bt BT_SEL 1 			  &bt BT_SEL 4 &none &none 	  &none &none
-				&soft_off		&none &none &none      &bt BT_SEL 2               &bt BT_SEL 5 &none &none 	  &none &none
+				&win_off		&none &none &none      &bt BT_SEL 2               &bt BT_SEL 5 &none &none 	  &none &none
 																&trans &trans   		  &trans &trans 
 				>;
 		};
