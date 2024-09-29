@@ -45,7 +45,7 @@
 		td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <600>;
+            tapping-term-ms = <500>;
             bindings = <&sl EXT>, <&sl FNC>;
         };
 
