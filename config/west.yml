@@ -20,7 +20,7 @@ manifest:
     - name: urchin-zmk-module
       remote: duckyb
       revision: main
-    - name: urchin-peripheral-animation   
+    - name: nice-view-mod   
       remote: ulounge                       
       revision: main                      
   self:
