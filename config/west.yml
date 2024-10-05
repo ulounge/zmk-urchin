@@ -9,6 +9,9 @@ manifest:
       # kyek / duckyb
     - name: duckyb
       url-base: https://github.com/duckyb
+      # ulounge
+    - name: ulounge
+      url-base: https://github.com/ulounge
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -17,5 +20,8 @@ manifest:
     - name: urchin-zmk-module
       remote: duckyb
       revision: main
+    - name: urchin-peripheral-animation   
+      remote: ulounge                       
+      revision: main                      
   self:
     path: config
