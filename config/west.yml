@@ -9,9 +9,11 @@ manifest:
       # kyek / duckyb
     - name: duckyb
       url-base: https://github.com/duckyb
+      # If you don't use animation delete from Here
       # ulounge
     - name: ulounge
       url-base: https://github.com/ulounge
+      # To Here
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -20,8 +22,10 @@ manifest:
     - name: urchin-zmk-module
       remote: duckyb
       revision: main
+      # If you don't use animation delete from Here
     - name: nice-view-mod   
       remote: ulounge                       
-      revision: main                      
+      revision: main
+      # To Here                      
   self:
     path: config
