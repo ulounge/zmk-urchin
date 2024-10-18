@@ -10,6 +10,7 @@ The specs I wanted were the following :
 - low profile so Choc v1 switches and hotswap
 - BLE (no cable)
 - nice case available  
+
 There were so many options I had [to draw a diagram](assets/pdf/keyboard_mapping.pdf) to see more clearly.  
 At the end of the day, 2 options remained, the 2 thumb keys Urchin or the 3 ones Temper. I went then to check how the 2 candidates supported both the keyboard build and the firmware.  
 Urchin's super well documented for both his build and ZMK github repos. YT build video on top... What else?  
