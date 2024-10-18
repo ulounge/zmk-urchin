@@ -14,7 +14,7 @@ There were so many options I had [to draw a diagram](assets/pdf/keyboard_mapping
 At the end of the day, 2 options remained, the 2 thumb keys Urchin or the 3 ones Temper. I went then to check how the 2 candidates supported both the keyboard build and the firmware.  
 Urchin's super well documented for both his build and ZMK github repos. YT build video on top... What else?  
 I had my winner with the Urchin. Giant kudos to [Kyek](https://github.com/duckyb) for his amazing job!  
-I ordered a kit at [beekeeb.com](https://shop.beekeeb.com/product/urchin-diy-kit/)
+I ordered a kit at [beekeeb.com](https://shop.beekeeb.com/product/urchin-diy-kit/) and [a case on Amazon](https://www.amazon.fr/gp/product/B019H2PT6Q/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1) for GPS in which the Urchin fits really well.
 
 ### Layout - French & English efficiency -
 As I was already switching from a normal azerty keyboard to a split staggered one I felt like going to the end of the road by switching layout too. Which one to go for though?  
@@ -60,6 +60,8 @@ Go visit [his Github](https://github.com/GPeye/urchin-peripheral-animation) repo
   <img src="assets/images/pic_03.jpg" alt="My Urchin - left side"/>
   <img src="assets/images/pic_04.jpg" alt="My Urchin - Logi MX Mechanical Mini vs Urchin form factor compared"/>
   <img src="assets/images/pic_05.jpg" alt="My Urchin - My 'away' set up"/>
+  <img src="assets/images/pic_06.jpg" alt="My Urchin - Urchin in its case"/>
+  <img src="assets/images/pic_07.jpg" alt="My Urchin - Logi MX Mechanical Mini vs Urchin case form factor compared"/>
 </details>
 
 ## Getting started with the firmware
