@@ -54,7 +54,7 @@ Go visit [his Github](https://github.com/GPeye/urchin-peripheral-animation) repo
 ### End result
 
 <details>
-  <summary>Pictures</summary>
+  <summary>Click here to see the final result</summary>
   <img src="assets/images/pic_01.jpg" alt="My Urchin - From above"/>
   <img src="assets/images/pic_02.jpg" alt="My Urchin - right side"/>
   <img src="assets/images/pic_03.jpg" alt="My Urchin - left side"/>
