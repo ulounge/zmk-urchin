@@ -54,10 +54,12 @@ Go visit [his Github](https://github.com/GPeye/urchin-peripheral-animation) repo
 ### End result
 
 <details>
-  <summary>The title of the image group</summary>
-  <img src="image-url" alt="image-description"/>
-  <img src="image-url" alt="image-description"/>
-  <img src="image-url" alt="image-description"/>
+  <summary>Pictures</summary>
+  <img src="assets/images/pic_01.jpg" alt="My Urchin - From above"/>
+  <img src="assets/images/pic_02.jpg" alt="My Urchin - right side"/>
+  <img src="assets/images/pic_03.jpg" alt="My Urchin - left side"/>
+  <img src="assets/images/pic_04.jpg" alt="My Urchin - Logi MX Mechanical Mini vs Urchin form factor compared"/>
+  <img src="assets/images/pic_05.jpg" alt="My Urchin - My 'away' set up"/>
 </details>
 
 ## Getting started with the firmware
