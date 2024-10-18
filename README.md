@@ -1,4 +1,5 @@
-French variant firmware for: [Urchin Keyboard](https://github.com/duckyb/urchin)
+French variant firmware for: [Urchin Keyboard](https://github.com/duckyb/urchin)  
+Check out there for the [original Kyek Italian version](https://github.com/duckyb/zmk-urchin)
 
 
 ## The journey that leads to an Urchin keyboard
@@ -9,7 +10,7 @@ The specs I wanted were the following :
 - low profile so Choc v1 switches and hotswap
 - BLE (no cable)
 - nice case available
-There were so many options I had [to draw a diagram](https://drive.google.com/file/d/13gCpgxe-9pNNVhypWT9n905jhQcJiVr8/view?usp=drivesdk) to see more clearly.  
+There were so many options I had [to draw a diagram](assets/pdf/keyboard_mapping.pdf) to see more clearly.  
 At the end of the day, 2 options remained, the 2 thumb keys Urchin or the 3 ones Temper. I went then to check how the 2 candidates supported both the keyboard build and the firmware.  
 Urchin's super well documented for both his build and ZMK github repos. YT build video on top... What else?  
 I had my winner with the Urchin. Giant kudos to [Kyek](https://github.com/duckyb) for his amazing job!  
@@ -35,6 +36,20 @@ I had to go [custom](https://fkcaps.com/custom/) with the following specs in min
 - Replacing the Hiragana symbols that you can find on the lower right hand of the original MBK legends set with the corresponding Katakana symbols that I find more appealing.
 - Substitutes for B and L do not exist in Katakana. It ended up to be a good thing because I wanted to use both フ and レ symbols wich are the main components of my company logo.
 - Playstation pad buttons symbols for the thumb keys.
+<div align="center">
+  
+  ![Katakana-layout](assets/images/keyboard_switch.drawio.svg)
+
+</div>
+
+### Animation - Dynamic Urchin FTW -
+Thanks to [Gpeye](https://github.com/GPeye), it's been very easy to replace the original nice!view pictures with an animation more aligned with the keyboard theme.
+Go visit [his Github](https://github.com/GPeye/urchin-peripheral-animation) repo to custom yours!
+<div align="left">
+  
+  ![Urchin-animation](assets/images/Sprite.gif)
+
+</div>
 
 ### End result
 
@@ -101,10 +116,16 @@ This layout is inspired by [Duckyb's](https://github.com/duckyb/zmk-urchin)
 
 <div align="center">
   
-  ![sweep-layout](assets/My_Uchin.drawio.svg)
+  ![sweep-layout](assets/images/My_Uchin.drawio.svg)
 
 </div>
 
 *This diagram was created using draw.io*  
 *Click [HERE](https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=My%20Uchin%20V2.drawio.png#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1-JAsnpWjMbz9zqAcpNJUgRKA_k3xYO6e%26export%3Ddownload) to view a copy that you can edit*
 
+## Known issues & Room for Improvements
+  ### Known issues
+  The following keys don't work on Android:  
+  - À, Ç, œ, æ, È and É  
+  ### Room for Improvements
+  Heavier silent linear switches would be nice.
