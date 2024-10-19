@@ -35,7 +35,7 @@ At start I had blank keycaps but I felt like a bit of decoration would be nice t
 I had to go [custom](https://fkcaps.com/custom/) with the following specs in mind:
 - Get rid of the roman legends, japanese symbols only.
 - Replacing the Hiragana symbols that you can find on the lower right hand of the original MBK legends set with the corresponding Katakana symbols that I find more appealing.
-- Substitutes for B and L as they don't exist in Katakana. It ended up to be a good thing because I wanted to use both フ and レ symbols wich are the main components of [my company logo](https://southwatts.com/).
+- Substitutes for B and L as I wanted to use both フ and レ symbols wich are the main components of [my company logo](https://southwatts.com/).
 - Playstation pad buttons symbols for the thumb keys.
 <div align="center">
   
