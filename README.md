@@ -126,7 +126,7 @@ This layout is inspired by [Duckyb's](https://github.com/duckyb/zmk-urchin)
 </div>
 
 *This diagram was created using draw.io*  
-*Click [HERE](https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=My%20Uchin%20V2.drawio.png#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1-JAsnpWjMbz9zqAcpNJUgRKA_k3xYO6e%26export%3Ddownload) to view a copy that you can edit*
+*Click [HERE](https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=My%20Uchin%20V2.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D13KDSgTQiUiR5nzuz162pHVzZuXsNpI6_%26export%3Ddownload) to view a copy that you can edit*
 
 ## Known issues & Room for Improvements
   ### Known issues
