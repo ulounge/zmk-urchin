@@ -346,7 +346,7 @@
 			display-name = "ShortC";
 			bindings = <
 			&kp LC(LA(LG(FR_AMPR))) &kp LC(LA(LG(FR_EACU))) &kp LC(LA(LG(FR_DQUO))) &kp LC(LA(LG(FR_QUOT))) &kp LC(LA(LG(FR_LPRN)))     &none 			 &none 			  &none 			&none 	&kp LC(LA(DEL))
-			&none					&none 					&kp C_MUTE 				&kp C_VOL_DN 			&kp C_VOL_UP    			&kp LC(RA(FR_X)) &kp LC(RA(FR_Y)) &kp LC(RA(FR_D)) 	&none	&kp LC(LS(FR_O))
+			&none					&none 					&kp C_MUTE 				&kp C_VOL_DN 			&kp C_VOL_UP    			&kp LC(RA(FR_X)) &kp LC(RA(FR_Y)) &kp LC(RA(FR_D)) 	&none	&kp F24
 			&kp PRINTSCREEN 		&none 					&kp C_PREV 				&kp C_PP  				&kp C_NEXT					&kp LC(RA(FR_U)) &kp LC(RA(FR_S)) &none 			&none 	&kp LG(SPACE) 
 																											&trans  &trans 				&trans &trans 
 			>;
