@@ -96,6 +96,11 @@ plain-language part.
 **Step 5 — Apply.** One logical change per commit, on `Dev`, with a message that
 says what changed and on which layer.
 
+Attribution: when Claude makes the commit, end the message with exactly one
+`Assisted-By:` trailer naming the model — e.g.
+`Assisted-By: Claude Opus 5 <noreply@anthropic.com>`. Never `Co-Authored-By:`:
+Sylvain is the author of this repo, Claude assisted. Add no other trailer.
+
 **Step 6 — Test the real effect, not the save.**
 
 - A commit is not a test. A green GitHub Actions run is not a test either — it
@@ -145,6 +150,10 @@ added that Sylvain did not explicitly ask for, so he can strike it.
   behaviour changes.
 - Firmware only matches the diagram when the host OS is set to French input.
 - Known issue, do not "fix" by accident: À Ç œ æ È É do not work on Android.
+
+- Commit `7f901d4` (Add working rules for Claude sessions) carries an old
+  `Co-Authored-By:` trailer. It is already pushed — leave it. Correcting it
+  would mean rewriting history, which section 2 forbids.
 
 ---
 
