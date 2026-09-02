@@ -92,9 +92,20 @@ plain-language part.
 - Confirm layer names match the `#define` list and the layer order is unchanged.
 - Verify behaviors and properties against zmk.dev docs. Never invent devicetree
   syntax. If unsure, say so — do not produce plausible code.
+- Confirm the column alignment still holds after the edit (see Step 5).
 
 **Step 5 — Apply.** One logical change per commit, on `Dev`, with a message that
 says what changed and on which layer.
+
+Formatting is part of the change. `urchin.keymap` is hand-aligned with tabs so
+the 10 columns line up visually and each layer reads like the physical keyboard.
+That readability is deliberate — it is how Sylvain proofreads a keymap without
+being a developer. Preserve it: after any edit, the columns of the line you
+touched must still line up with the other rows of the same layer. Match the
+spacing patterns already in the file (a short `&none` is padded to hold its
+column). Adjust whitespace ONLY on the lines you change. Never reformat,
+re-indent, re-tab or "tidy" any other line, layer or file — not even one that
+looks untidy.
 
 Attribution: when Claude makes the commit, end the message with exactly one
 `Assisted-By:` trailer naming the model — e.g.
@@ -159,6 +170,17 @@ added that Sylvain did not explicitly ask for, so he can strike it.
   behaviour changes.
 - Firmware only matches the diagram when the host OS is set to French input.
 - Known issue, do not "fix" by accident: À Ç œ æ È É do not work on Android.
+- The keymap diagram is a draw.io file in Sylvain's Google Drive, id
+  `13KDSgTQiUiR5nzuz162pHVzZuXsNpI6_` ("My Uchin V2.drawio"). Cowork reads its XML
+  directly — no export is needed to understand the design, and the cell geometry
+  maps to binding positions. To produce the repo asset it renders with the
+  draw.io desktop CLI:
+  `xvfb-run -a drawio -x -f svg --svg-theme light -o out.svg in.drawio --no-sandbox`
+  `--svg-theme light` is NOT optional. The default (`auto`) writes
+  `color-scheme: light dark` into the SVG, so the diagram re-colours itself in a
+  dark browser and stops matching what Sylvain drew. The committed asset must
+  read `color-scheme: light`. The asset filename is
+  `assets/images/My_Uchin.drawio2.svg` — the one the README points at.
 
 - Commit `7f901d4` (Add working rules for Claude sessions) carries an old
   `Co-Authored-By:` trailer. It is already pushed — leave it. Correcting it
@@ -172,3 +194,71 @@ added that Sylvain did not explicitly ask for, so he can strike it.
 - Push back with a better option rather than agreeing to please.
 - Cite sources — zmk.dev for anything ZMK.
 - Concise and segmented. Show the diff, not a description of it.
+
+---
+
+## 8. The design-to-code loop — where changes come from
+
+Keymap changes start as a drawing, not as a request in chat. The order is fixed.
+
+1. **Sylvain designs** in draw.io. The diagram is the source of truth for intent.
+   Its structure mirrors the keymap: 10 columns x 3 rows plus thumbs, per layer.
+2. **Cowork translates.** It reads the drawio XML, maps cells to binding positions
+   by geometry, and produces a **change spec**: layer, position, current binding ->
+   new binding, behavior, and the exact `FR_` code from `config/keymap_french.h`.
+   Labels are Sylvain's own vocabulary — ask, never guess. Sylvain approves the
+   spec before any code exists.
+3. **Claude Code implements** the approved spec — normally `config/urchin.keymap`
+   and the SVG in `assets/images/`, in the SAME commit so the README never drifts
+   from the firmware. Implement the spec, invent no scope.
+4. **Sylvain checks the diff**, then Cowork verifies the committed diff
+   independently: 34 bindings per layer, behaviors defined, French codes real,
+   layer order unchanged.
+5. **Build, flash, test on hardware.** Keymap-only change: the left half is enough
+   (left is central). Anything else: both halves.
+6. **PR `Dev` -> `master`.** The description is a release note in FUNCTIONAL
+   language, not technical:
+
+   > **Added** — shortcut to launch PresentMon
+   > **Changed** — "i" moved to left hand, second row, third column
+   > **Deleted** — Hue lights shortcut
+
+Merge only after the hardware test passes.
+
+---
+
+## 9. Layout concepts
+
+**Reading a key.** Two signs stacked: hold gives the top one, tap gives the one
+below (`&qt` hold-tap, 200 ms). `✲` on the diagram means Ctrl. Capitals are typed
+by holding the letter, not with a Shift key.
+
+**The four thumbs**, left to right across both halves: LL, LR, RL, RR.
+
+| Thumb | Tap | Hold | Double tap |
+|---|---|---|---|
+| LL | — | — | 1 tap -> Ext, 2 taps -> Fnc |
+| LR | Space | Shift | — |
+| RL | Enter | Sht layer | — |
+| RR | — | — | 1 tap -> Acc, 2 taps -> Num |
+
+LL + LR held together -> Settings (combo, positions 30+31).
+
+**Two kinds of layer.** Sticky (`&sl`): Ext, Fnc, Acc, Num — one keypress and you
+are back on Base automatically. Held (`&lt` / `&mo`): Sht and Settings — active
+only while the thumb is down. Base is the default layer.
+
+**Shortcut families.** Keep new shortcuts inside one of these, and never let a
+new one collide with an existing member:
+
+| Family | Chord |
+|---|---|
+| FancyZones window layouts | `Ctrl+Alt+Win` + digit |
+| Philips Hue lights | `Ctrl+AltGr` + letter |
+| Raycast commands | `Ctrl+Alt+Win` + letter |
+
+Avoid `Ctrl+Alt+E` in any family: on French AZERTY that is AltGr+E, which types €.
+
+**The full per-key reference** — every binding on every layer with what it does —
+lives in the Claude Project doc `claude/keymap-reference.md`, not here. Regenerate
+it from the keymap after any change.
