@@ -139,9 +139,18 @@ added that Sylvain did not explicitly ask for, so he can strike it.
 
 - Branch is `Dev` — capital D. Git is case-sensitive; getting this wrong wastes
   twenty minutes every time.
-- `config/west.yml` pins ZMK to `revision: main`, i.e. unpinned. If a build fails
-  and the keymap did not change, suspect an upstream ZMK break first: check the
-  ZMK changelog before touching Sylvain's files.
+- ZMK is pinned to `v0.3.0` in TWO places and they must always match:
+  `config/west.yml` (`revision: v0.3.0` — the source tree) and
+  `.github/workflows/build.yml` (`build-user-config.yml@v0.3.0` — the CI
+  workflow). Pinning only one half-works silently: with `west.yml` alone the
+  firmware compiles, then main's post-build "explicit ZMK compat" step hard-fails
+  and the artifact upload is skipped. Never change one without the other.
+- Why: ZMK main moved to Zephyr 4.1 board variants in Dec 2025, so `nice_nano_v2`
+  no longer exists there, and `build.yaml` names it three times. Upstream
+  `duckyb/urchin-zmk-firmware` pinned to v0.3.0 the same way.
+- Because ZMK is pinned, a failing build is no longer evidence of an upstream
+  break. Suspect in order: the keymap, then `urchin-zmk-module` and
+  `nice-view-mod` — both still `revision: main`, the only unpinned moving parts.
 - `build.yaml` uses a custom shield `nice_view_custom` from `ulounge/nice-view-mod`.
   Reverting to stock `nice_view` requires editing BOTH `build.yaml` and `west.yml`.
   Never touch one without the other.
